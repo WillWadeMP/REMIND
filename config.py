@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 # API Configuration
 # Hardcoded key for personal use
-CLAUDE_API_KEY = "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"
+CLAUDE_API_KEY = "removed"
 # Model Configuration
 # Main model for response generation and complex tasks
 CLAUDE_MODEL = "claude-3-5-sonnet-20241022"  # Modern, capable model
