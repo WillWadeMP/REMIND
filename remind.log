@@ -1,0 +1,366 @@
+2025-04-13 13:32:47,586 - src.memory_layer - INFO - MemoryLayer initialized with directories: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic, C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic
+2025-04-13 13:32:47,954 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:32:47,955 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:32:47,955 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:32:47,955 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:32:47,955 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:32:47,956 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:32:47,956 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:32:47,956 - src.metadata_extractor - INFO - MetadataExtractor initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:32:47,956 - src.prompt_handler - INFO - PromptHandler initialized
+2025-04-13 13:32:47,956 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:32:47,957 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:32:47,957 - src.relevancer - INFO - Relevancer initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:32:47,957 - src.response_generator - INFO - ResponseGenerator initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:32:47,957 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:32:47,959 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:32:47,959 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:32:47,959 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:32:47,959 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:32:47,959 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:32:47,959 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:32:47,959 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:32:47,959 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:32:47,959 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:32:47,960 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:32:47,960 - src.memory_updater - INFO - MemoryUpdater initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:34:05,430 - src.memory_layer - INFO - MemoryLayer initialized with directories: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic, C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic
+2025-04-13 13:34:05,750 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:34:05,750 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:34:05,750 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:34:05,751 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:34:05,751 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:34:05,751 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:34:05,751 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:34:05,752 - src.metadata_extractor - INFO - MetadataExtractor initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:34:05,752 - src.prompt_handler - INFO - PromptHandler initialized
+2025-04-13 13:34:05,752 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:34:05,752 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:34:05,752 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:34:05,752 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:34:05,752 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:34:05,752 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:34:05,752 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:34:05,753 - src.relevancer - INFO - Relevancer initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:34:05,753 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:34:05,753 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:34:05,753 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:34:05,753 - src.response_generator - INFO - ResponseGenerator initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:34:05,753 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:34:05,753 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:34:05,753 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:34:05,753 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:34:05,753 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:34:05,754 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:34:05,754 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:34:05,754 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:34:05,754 - src.claude_client - INFO - Found anthropic module version: 0.4.1
+2025-04-13 13:34:05,754 - src.claude_client - INFO - Using custom implementation via requests
+2025-04-13 13:34:05,754 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:34:05,754 - src.memory_updater - INFO - MemoryUpdater initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:36:07,033 - src.memory_layer - INFO - MemoryLayer initialized with directories: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic, C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic
+2025-04-13 13:36:07,511 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:36:07,861 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:36:07,861 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:36:07,861 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:36:07,862 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:36:08,123 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:36:08,124 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:36:08,124 - src.metadata_extractor - INFO - MetadataExtractor initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:36:08,124 - src.prompt_handler - INFO - PromptHandler initialized
+2025-04-13 13:36:08,124 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:36:08,399 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:36:08,400 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:36:08,400 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:36:08,400 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:36:08,639 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:36:08,640 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:36:08,640 - src.relevancer - INFO - Relevancer initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:36:08,640 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:36:08,881 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:36:08,881 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:36:08,881 - src.response_generator - INFO - ResponseGenerator initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:36:08,881 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:36:09,130 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:36:09,130 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:36:09,130 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:36:09,130 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:36:09,406 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:36:09,406 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:36:09,406 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:36:09,406 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:36:09,666 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:36:09,666 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:36:09,666 - src.memory_updater - INFO - MemoryUpdater initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:38:56,797 - src.memory_layer - INFO - MemoryLayer initialized with directories: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic, C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic
+2025-04-13 13:38:57,242 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:38:57,578 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:38:57,578 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:38:57,578 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:38:57,579 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:38:57,848 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:38:57,848 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:38:57,848 - src.metadata_extractor - INFO - MetadataExtractor initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:38:57,849 - src.prompt_handler - INFO - PromptHandler initialized
+2025-04-13 13:38:57,849 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:38:58,115 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:38:58,115 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:38:58,115 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:38:58,116 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:38:58,392 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:38:58,392 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:38:58,392 - src.relevancer - INFO - Relevancer initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:38:58,393 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:38:58,640 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:38:58,640 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:38:58,640 - src.response_generator - INFO - ResponseGenerator initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:38:58,640 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:38:58,889 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:38:58,889 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:38:58,889 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:38:58,889 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:38:59,131 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:38:59,131 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:38:59,131 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:38:59,132 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:38:59,407 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:38:59,407 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:38:59,407 - src.memory_updater - INFO - MemoryUpdater initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:41:33,817 - src.memory_layer - INFO - MemoryLayer initialized with directories: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic, C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic
+2025-04-13 13:41:33,818 - src.claude_client - ERROR - CLAUDE_API_KEY environment variable is not set
+2025-04-13 13:42:22,777 - src.memory_layer - INFO - MemoryLayer initialized with directories: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic, C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic
+2025-04-13 13:42:23,249 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:42:23,581 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:42:23,582 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:42:23,582 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:42:23,582 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:42:23,825 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:42:23,825 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:42:23,825 - src.metadata_extractor - INFO - MetadataExtractor initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:42:23,825 - src.prompt_handler - INFO - PromptHandler initialized
+2025-04-13 13:42:23,826 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:42:24,129 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:42:24,129 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:42:24,129 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:42:24,130 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:42:24,376 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:42:24,377 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:42:24,377 - src.relevancer - INFO - Relevancer initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:42:24,377 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:42:24,622 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:42:24,623 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:42:24,623 - src.response_generator - INFO - ResponseGenerator initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:42:24,623 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:42:24,860 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:42:24,861 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:42:24,861 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:42:24,861 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:42:25,107 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:42:25,108 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:42:25,108 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 13:42:25,108 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 13:42:25,352 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 13:42:25,352 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 13:42:25,352 - src.memory_updater - INFO - MemoryUpdater initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 13:42:25,356 - web_interface.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 13:42:25,388 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 13:42:25,388 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 13:42:34,633 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:42:34] "GET / HTTP/1.1" 200 -
+2025-04-13 13:42:34,749 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:42:34] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-13 13:42:34,749 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:42:34] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-04-13 13:42:35,187 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:42:35] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 13:42:35,195 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:42:35] "GET /api/memories/hooks HTTP/1.1" 200 -
+2025-04-13 13:42:35,348 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:42:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-13 13:42:55,841 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:42:55,842 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:42:57,619 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:42:57,619 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:42:59,319 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:42:59,320 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:43:03,112 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 13:43:03,307 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:43:03,308 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:43:04,820 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:43:04,820 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:43:10,084 - src.memory_layer - INFO - Stored episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_134310_082484.json
+2025-04-13 13:43:10,276 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:43:10,280 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:43:12,275 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:43:12,276 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:43:14,150 - src.memory_layer - INFO - Stored non-episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic\non_episodic_william_eating_20250413_134314.json
+2025-04-13 13:43:14,150 - src.memory_updater - INFO - Updated memories: episodic=C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_134310_082484.json, non_episodic=1
+2025-04-13 13:43:14,150 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:43:14] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 13:43:14,182 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:43:14] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 13:43:14,188 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:43:14] "GET /api/memories/hooks HTTP/1.1" 200 -
+2025-04-13 13:47:32,577 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:47:32,578 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:47:35,057 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:47:35,058 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:47:39,386 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:47:39,388 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:47:49,444 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 13:47:49,672 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:47:49,673 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:47:53,680 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:47:53,683 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:47:57,786 - src.memory_layer - INFO - Stored episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_134757_785626.json
+2025-04-13 13:47:58,195 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:47:58,196 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:48:00,471 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:48:00,471 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:48:02,879 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:48:02,880 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:48:04,929 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:48:04,933 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:48:06,976 - src.memory_layer - INFO - Stored non-episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic\non_episodic_french_dining_20250413_134806.json
+2025-04-13 13:48:06,978 - src.memory_layer - INFO - Stored non-episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic\non_episodic_french_cuisine_20250413_134806.json
+2025-04-13 13:48:06,979 - src.memory_layer - INFO - Stored non-episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic\non_episodic_french_dining_20250413_134806.json
+2025-04-13 13:48:06,979 - src.memory_updater - INFO - Updated memories: episodic=C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_134757_785626.json, non_episodic=3
+2025-04-13 13:48:06,980 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:48:06] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 13:48:07,024 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:48:07] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 13:48:07,031 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:48:07] "GET /api/memories/hooks HTTP/1.1" 200 -
+2025-04-13 13:49:20,359 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:49:20,359 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:49:23,257 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:49:23,259 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:49:26,318 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:49:26,319 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:49:30,786 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 13:49:31,220 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:49:31,221 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:49:33,122 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:49:33,122 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:49:42,871 - src.memory_layer - INFO - Stored episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_134942_870863.json
+2025-04-13 13:49:43,064 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:49:43,064 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:49:44,247 - src.memory_updater - INFO - Updated memories: episodic=C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_134942_870863.json, non_episodic=0
+2025-04-13 13:49:44,248 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:49:44] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 13:49:44,269 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:49:44] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 13:49:44,275 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:49:44] "GET /api/memories/hooks HTTP/1.1" 200 -
+2025-04-13 13:50:32,447 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:50:32,448 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:50:33,997 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:50:33,998 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:50:37,552 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:50:37,552 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:50:41,661 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 13:50:41,852 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:50:41,852 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:50:43,754 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:50:43,755 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:50:48,877 - src.memory_layer - INFO - Stored episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_135048_877478.json
+2025-04-13 13:50:49,062 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 13:50:49,063 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 13:50:50,588 - src.memory_updater - INFO - Updated memories: episodic=C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_135048_877478.json, non_episodic=0
+2025-04-13 13:50:50,588 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:50:50] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 13:50:50,606 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:50:50] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 13:50:50,613 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 13:50:50] "GET /api/memories/hooks HTTP/1.1" 200 -
+2025-04-13 14:03:55,525 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 14:03:55,527 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 14:03:58,408 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 14:03:58,409 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 14:04:01,886 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 14:04:01,886 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 14:04:05,684 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 14:04:05,867 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 14:04:05,868 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 14:04:07,715 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 14:04:07,715 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 14:04:15,295 - src.memory_layer - INFO - Stored episodic memory: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_140415_294295.json
+2025-04-13 14:04:15,475 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 14:04:15,477 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 14:04:17,039 - src.memory_updater - INFO - Updated memories: episodic=C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic\episodic_20250413_140415_294295.json, non_episodic=0
+2025-04-13 14:04:17,040 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:04:17] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 14:04:17,061 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:04:17] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 14:04:17,068 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:04:17] "GET /api/memories/hooks HTTP/1.1" 200 -
+2025-04-13 14:04:49,772 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:04:49] "GET / HTTP/1.1" 200 -
+2025-04-13 14:04:49,804 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:04:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 14:04:49,805 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:04:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-13 14:04:50,042 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:04:50] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 14:04:50,071 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:04:50] "GET /api/memories/hooks HTTP/1.1" 200 -
+2025-04-13 14:05:02,105 - src.memory_layer - INFO - MemoryLayer initialized with directories: C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\episodic, C:\Users\Will\OneDrive\Documents\GitHub\REMIND\memory\non_episodic
+2025-04-13 14:05:02,693 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 14:05:03,018 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 14:05:03,018 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 14:05:03,018 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 14:05:03,018 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 14:05:03,281 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 14:05:03,281 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 14:05:03,281 - src.metadata_extractor - INFO - MetadataExtractor initialized with model: claude-3-5-haiku-20241022
+2025-04-13 14:05:03,281 - src.prompt_handler - INFO - PromptHandler initialized
+2025-04-13 14:05:03,281 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 14:05:03,535 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 14:05:03,535 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 14:05:03,535 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 14:05:03,535 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 14:05:03,772 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 14:05:03,772 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 14:05:03,772 - src.relevancer - INFO - Relevancer initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 14:05:03,772 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 14:05:04,052 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 14:05:04,052 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 14:05:04,052 - src.response_generator - INFO - ResponseGenerator initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 14:05:04,052 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 14:05:04,301 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 14:05:04,301 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 14:05:04,301 - src.hook_generator - INFO - HookGenerator initialized with model: claude-3-5-haiku-20241022
+2025-04-13 14:05:04,301 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 14:05:04,568 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 14:05:04,568 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 14:05:04,568 - src.summarizer - INFO - Summarizer initialized with model: claude-3-5-haiku-20241022
+2025-04-13 14:05:04,568 - src.claude_client - INFO - Found anthropic module version: 0.49.0
+2025-04-13 14:05:04,812 - src.claude_client - INFO - Created client with modern Anthropic SDK
+2025-04-13 14:05:04,812 - src.claude_client - INFO - Successfully created Claude client wrapper
+2025-04-13 14:05:04,812 - src.memory_updater - INFO - MemoryUpdater initialized with model: claude-3-5-sonnet-20241022
+2025-04-13 14:05:04,815 - web_interface.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 14:05:04,831 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 14:05:04,832 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 14:05:09,233 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:05:09] "GET / HTTP/1.1" 200 -
+2025-04-13 14:05:09,289 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:05:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 14:05:09,304 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:05:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-13 14:05:09,658 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:05:09] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 14:05:09,669 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:05:09] "GET /api/memories/hooks HTTP/1.1" 200 -
+2025-04-13 14:05:15,769 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-04-13 14:05:15,770 - src.claude_client - ERROR - Error in modern client messages call: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'system: Input should be a valid list'}}
+2025-04-13 14:05:15,770 - src.claude_client - INFO - Falling back to direct API call
+2025-04-13 14:05:17,436 - web_interface.app - ERROR - Exception on /api/chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web_interface\app.py", line 43, in chat
+    relevant_memories = relevancer.retrieve(processed_prompt)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\relevancer.py", line 106, in retrieve
+    hooks = self.hook_generator.generate_hooks(prompt_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\hook_generator.py", line 41, in generate_hooks
+    basic_hooks = self._extract_basic_hooks(text)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\hook_generator.py", line 176, in _extract_basic_hooks
+    single_word_hooks = [word for word, freq in sorted_words[:10] if word not in config.STOPWORDS]
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\hook_generator.py", line 176, in <listcomp>
+    single_word_hooks = [word for word, freq in sorted_words[:10] if word not in config.STOPWORDS]
+                                                                                 ^^^^^^^^^^^^^^^^
+AttributeError: module 'config' has no attribute 'STOPWORDS'
+2025-04-13 14:05:17,441 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:05:17] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -

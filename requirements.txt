@@ -1,0 +1,15 @@
+# Core dependencies
+anthropic = 0.49.0
+flask==2.3.3
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Utility libraries
+pytz==2023.3
+python-dateutil==2.8.2
+
+# Development tools
+pytest==7.4.0
+pytest-cov==4.1.0
+black==23.7.0
+flake8==6.1.0
