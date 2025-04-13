@@ -1,130 +1,126 @@
-# REMIND - Retrieval of Episodic & Metadata-Indexed Information for Natural Dialogue
+# REMIND - Retrieval-Enhanced Memory for Interactive Natural Dialogue
 
-REMIND is a lightweight, pseudo-memory framework for Large Language Models (LLMs), designed to simulate memory recall and retention using local file-based storage. It enhances AI dialogue systems by allowing dynamic referencing of past interactions and stored knowledge.
+REMIND is a lightweight memory framework for Large Language Models (LLMs) that enhances AI dialogue systems with dynamic memory management for more coherent and contextual conversations.
 
 ## Features
 
-- **Structured Memory Organization**: Episodic and non-episodic memory formats
-- **Efficient Retrieval**: Using summarization, keyword extraction, and contextual hooks
-- **Browser-Based Interface**: Explore and visualize AI memories
-- **Claude-Powered**: Leverages Claude for natural language understanding and generation
-- **File-Based Storage**: Simple JSON-based storage for easy deployment and inspection
+- **Three-Tier Memory System**:
+  - **Conversation Memory**: Stores entire conversations for seamless context
+  - **Episodic Memory**: Captures specific interactions and events
+  - **Non-Episodic Memory**: Retains facts, preferences, and general knowledge
+
+- **Efficient Retrieval**: Quickly access relevant memories using vector similarity search
+- **Browser Interface**: Explore and manage AI memories through an intuitive web UI
+- **Claude-Powered**: Leverages Claude AI for natural language understanding and generation
+- **Simple File Structure**: JSON-based storage for easy inspection and portability
 
 ## System Overview
 
-REMIND is composed of the following core modules:
+REMIND consists of these core modules:
 
-- **User Prompt Handler**: Processes user inputs
-- **Summariser**: Creates concise summaries of text
-- **Memory Layer**: Manages episodic and non-episodic memories
-- **Metadata Extractor**: Extracts keywords, dates, and themes
-- **Relevancer**: Retrieves relevant memories based on context
-- **Response Generator**: Creates responses incorporating relevant memories
-- **Memory Updater**: Updates the memory system with new information
-- **Hook Generator**: Creates hooks for efficient memory indexing
+- **Memory Manager**: Central component that coordinates all memory operations
+- **Memory Storage**: Handles saving, loading, and organizing memories
+- **Retriever**: Finds relevant memories based on current context
+- **Processor**: Transforms raw conversations into structured memories
+- **Web Interface**: Visualizes memories and provides interactive access
 
 ## Quick Setup
 
-For a quick and easy setup, run:
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/remind.git
+cd remind
 
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set your API key
+# Linux/macOS:
+export ANTHROPIC_API_KEY=your_api_key_here
+# Windows:
+set ANTHROPIC_API_KEY=your_api_key_here
+
+# Run the application
+python main.py
 ```
-python setup.py
-```
-
-This script will:
-1. Install all required dependencies
-2. Create the necessary directories
-3. Help you set up your Claude API key
-4. Provide instructions for running the system
-
-## Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/remind.git
-   cd remind
-   ```
-
-2. Create a virtual environment and activate it:
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install the dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-4. Set up your Claude API key:
-   ```
-   export CLAUDE_API_KEY=your_api_key_here  # On Windows: set CLAUDE_API_KEY=your_api_key_here
-   ```
 
 ## Usage
-
-### Command Line Interface
-
-Run the system in CLI mode:
-
-```
-python main.py --cli
-```
 
 ### Web Interface
 
 Start the web interface:
 
-```
+```bash
 python main.py --web
 ```
 
 Then open your browser and navigate to http://127.0.0.1:5000/
 
-## Memory Structures
+### Command Line Interface
+
+Run the system in CLI mode:
+
+```bash
+python main.py --cli
+```
+
+## Memory Structure
+
+### Conversation Memory
+
+Stores entire conversations for consistent context across multiple interactions.
+
+```json
+{
+  "id": "conv_20250413120000",
+  "type": "conversation",
+  "created_at": "2025-04-13T12:00:00.000Z",
+  "updated_at": "2025-04-13T12:15:00.000Z",
+  "title": "Discussion about Paris travel plans",
+  "summary": "Conversation about planning a trip to Paris, including best times to visit and top attractions",
+  "messages": [
+    {"role": "user", "content": "What's the best time to visit Paris?", "timestamp": "2025-04-13T12:00:00.000Z"},
+    {"role": "assistant", "content": "The best time to visit Paris is...", "timestamp": "2025-04-13T12:00:10.000Z"}
+  ],
+  "tags": ["paris", "travel", "vacation", "france"]
+}
+```
 
 ### Episodic Memory
 
-Stores timestamped summaries of past conversations, indexed by date and topic-specific hooks.
+Stores specific events, interactions, or experiences.
 
-Example:
 ```json
 {
+  "id": "ep_20250413120500",
   "type": "episodic",
-  "conversation_id": "20250413120000",
-  "timestamp": "2025-04-13T12:00:00.000Z",
-  "content": "User: What's the capital of France?\n\nAssistant: The capital of France is Paris.",
-  "summary": "Conversation about the capital of France",
-  "hooks": ["france", "capital", "paris", "geography", "europe"]
+  "created_at": "2025-04-13T12:05:00.000Z",
+  "conversation_id": "conv_20250413120000",
+  "content": "User mentioned they prefer to travel in spring or fall, avoiding summer crowds",
+  "tags": ["preferences", "travel", "seasons", "crowds"]
 }
 ```
 
 ### Non-Episodic Memory
 
-Stores general facts, opinions, or persistent truths in a topic-agnostic format.
+Stores facts, preferences, or other persistent information.
 
-Example:
 ```json
 {
+  "id": "nep_20250413121000",
   "type": "non_episodic",
-  "timestamp": "2025-04-13T12:00:00.000Z",
-  "content": "User's favorite color is blue",
-  "hooks": ["blue", "favorite color", "preference", "user info"]
+  "created_at": "2025-04-13T12:10:00.000Z",
+  "content": "User's favorite season for travel is fall",
+  "confidence": 0.85,
+  "tags": ["preferences", "travel", "fall", "seasons"]
 }
 ```
 
-## Web Interface
-
-The web interface provides a way to interact with the REMIND system and explore its memories:
-
-- **Chat Interface**: Talk to the AI assistant
-- **Episodic Memory Viewer**: Browse past interactions
-- **Non-Episodic Memory Viewer**: Explore stored facts and knowledge
-- **Hook Browser**: View and filter by memory hooks
-
-## Development
-
-### Project Structure
+## Project Structure
 
 ```
 REMIND/
@@ -133,86 +129,32 @@ REMIND/
 ├── config.py                   # Configuration settings
 ├── main.py                     # Main entry point
 ├── memory/                     # Memory storage
-│   ├── __init__.py
-│   ├── episodic/               # Episodic memories (date-based)
-│   └── non_episodic/           # Non-episodic memories (fact-based)
-├── web_interface/              # Browser-based interface
-│   ├── __init__.py
-│   ├── static/                 # CSS, JS files
-│   ├── templates/              # HTML templates
-│   └── app.py                  # Flask web app
+│   ├── conversations/          # Conversation memories
+│   ├── episodic/               # Episodic memories
+│   └── non_episodic/           # Non-episodic memories
 ├── src/                        # Core modules
-│   ├── __init__.py
-│   ├── prompt_handler.py       # User prompt processing
-│   ├── summarizer.py           # Create summaries using Claude
-│   ├── metadata_extractor.py   # Extract keywords, dates, etc.
-│   ├── memory_layer.py         # Memory management
-│   ├── relevancer.py           # Retrieval engine
-│   ├── response_generator.py   # Generate responses with Claude
-│   ├── memory_updater.py       # Update memory with new information
-│   ├── hook_generator.py       # Generate hooks for indexing
+│   ├── memory_manager.py       # Central memory management
+│   ├── memory_storage.py       # Memory persistence
+│   ├── memory_retriever.py     # Memory retrieval logic
+│   ├── memory_processor.py     # Process raw data into memories
+│   ├── claude_client.py        # Claude API client
 │   └── utils.py                # Utility functions
-└── tests/                      # Test cases
-    ├── __init__.py
-    └── test_*.py               # Various test files
+└── web/                        # Web interface
+    ├── app.py                  # Flask web application
+    ├── static/                 # CSS, JS files
+    └── templates/              # HTML templates
 ```
 
-### Running Tests
+## Development
 
-Run the test suite:
+To contribute to this project:
 
-```
-pytest
-```
-
-## Future Enhancements
-
-- **Hook Frequency Tracker**: Weight common vs. rare tags
-- **Memory Pruner**: Trim low-relevance memories over time
-- **Contextual Balancer**: Balance recency vs. relevance in memory retrieval
-- **Database Integration**: Support for SQL or NoSQL databases
-- **Multi-user Support**: Separate memory spaces for different users
-- **Memory Visualization**: Advanced visualizations of memory connections
-
-## Troubleshooting
-
-### API Key Issues
-
-If you encounter issues with the Claude API, make sure:
-
-1. Your API key is correctly set in the environment variable `CLAUDE_API_KEY`.
-2. You're using a compatible model version. Try an older, more stable model:
-   ```
-   python main.py --model claude-2.0 --cli
-   ```
-
-### Compatibility Issues
-
-If you encounter compatibility issues with the Anthropic Python SDK:
-
-1. Try installing an older version:
-   ```
-   pip install anthropic==0.4.0
-   ```
-
-2. Use a different model version:
-   ```
-   python main.py --model claude-2.0 --cli
-   ```
-
-### Other Issues
-
-If you continue to experience problems:
-
-1. Check the log file at `remind.log` for more detailed error messages.
-2. Make sure all dependencies are installed correctly.
-3. Ensure your API key has the necessary permissions.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
 
 ## Acknowledgments
 
-- This project was developed using the Anthropic Claude API for natural language processing
-- Inspired by research on episodic memory in cognitive science
+- This project uses the Anthropic Claude API for natural language processing

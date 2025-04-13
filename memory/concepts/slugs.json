@@ -1,0 +1,28 @@
+{
+  "name": "slugs",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "Slugs are not sold in at least some pet shops, suggesting they may not be common as commercial pets.",
+        "memory_id": null,
+        "date": "2025-04-13T19:58:30.380029",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:58:30.380029"
+    ]
+  },
+  "related_concepts": {
+    "pet shop": "co-occurs",
+    "owner": "co-occurs",
+    "establishment": "co-occurs",
+    "jim": "co-occurs"
+  },
+  "tags": [
+    "slugs"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:58:43.091108"
+}

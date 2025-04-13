@@ -1,0 +1,38 @@
+{
+  "name": "pet slug",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "Pet slugs can be obtained from pet shops and kept as domestic pets. They can be given names like any other pet.",
+        "memory_id": null,
+        "date": "2025-04-13T19:48:47.778114",
+        "tone": "unclear"
+      },
+      {
+        "text": "Pet slugs can be kept as pets, though this appears to be an uncommon choice. There seems to be some discussion or concern about a particular pet slug's health or disability status, though specific details about the nature of slug disabilities are not established from this limited context.",
+        "memory_id": null,
+        "date": "2025-04-13T19:51:04.900018",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:48:47.778114",
+      "2025-04-13T19:51:04.900018"
+    ]
+  },
+  "related_concepts": {
+    "william": "co-occurs",
+    "pet shop": "co-occurs",
+    "slug": "co-occurs",
+    "henrietta": "co-occurs",
+    "john": "co-occurs",
+    "mum": "co-occurs",
+    "disabled": "co-occurs"
+  },
+  "tags": [
+    "pet slug"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:51:15.305678"
+}

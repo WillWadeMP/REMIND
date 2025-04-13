@@ -1,0 +1,32 @@
+{
+  "name": "legs",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "Legs can be absent from a human body, as in William's case. This represents a form of physical disability or limb loss.",
+        "memory_id": null,
+        "date": "2025-04-13T19:48:22.579927",
+        "tone": "unclear"
+      },
+      {
+        "text": "This memory only contains a question and doesn't actually provide factual information about legs. I cannot make any definitive statements about legs from this context alone, as it's simply asking about a specific person's (William's) apparent lack of legs without providing any explanatory details.",
+        "memory_id": null,
+        "date": "2025-04-13T19:49:31.192954",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:48:22.579927",
+      "2025-04-13T19:49:31.192954"
+    ]
+  },
+  "related_concepts": {
+    "william": "co-occurs"
+  },
+  "tags": [
+    "legs"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:49:37.817975"
+}

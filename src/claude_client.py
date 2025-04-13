@@ -1,234 +1,237 @@
 """
-Utility module for creating an Anthropic client regardless of installed version.
+Claude API client for REMIND.
+
+This module handles interactions with the Anthropic Claude API.
 """
 import logging
-import os
+import time
+from typing import Dict, List, Optional, Any
+
+import anthropic
+
 import config
 
 logger = logging.getLogger(__name__)
 
-def create_claude_client():
+class ClaudeClient:
     """
-    Create an Anthropic client that works with the installed version.
-    
-    Returns:
-        object: An Anthropic client object.
+    Handles interactions with the Anthropic Claude API.
     """
-    # Check that API key is set
-    if not config.CLAUDE_API_KEY:
-        logger.error("CLAUDE_API_KEY environment variable is not set")
-        raise ValueError("CLAUDE_API_KEY environment variable is not set. Please set it before running the application.")
     
-    # Import the anthropic module
-    try:
-        import anthropic
-        logger.info(f"Found anthropic module version: {getattr(anthropic, '__version__', 'unknown')}")
-    except ImportError:
-        logger.error("anthropic module not found. Please install it with 'pip install anthropic'")
-        raise ImportError("anthropic module not found. Please install it with 'pip install anthropic'")
+    def __init__(self):
+        """Initialize the Claude client with the API key."""
+        if not config.ANTHROPIC_API_KEY:
+            raise ValueError("ANTHROPIC_API_KEY not set in environment variables or config.py")
+        
+        self.api_key = config.ANTHROPIC_API_KEY
+        self.client = anthropic.Anthropic(api_key=self.api_key)
+        self.default_model = config.CLAUDE_MODEL
+        logger.info(f"ClaudeClient initialized with model {self.default_model}")
     
-    # Create a compatibility wrapper for the client
-    class ClaudeClientWrapper:
-        def __init__(self):
-            self.api_key = config.CLAUDE_API_KEY
-            self.model = config.CLAUDE_MODEL
-            
-            # Create the underlying client
-            try:
-                self._create_client()
-            except Exception as e:
-                logger.error(f"Failed to create Claude client: {e}")
-                raise
+    def complete(self, prompt: str, model: Optional[str] = None, 
+                temperature: float = 0.5, max_tokens: int = 1000) -> str:
+        """
+        Generate a completion from Claude.
         
-        def _create_client(self):
-            """Try different methods to create a client based on the installed SDK version."""
-            try:
-                # Modern SDK approach (anthropic>=0.5.0)
-                try:
-                    self._client = anthropic.Anthropic(api_key=self.api_key)
-                    self._client_type = 'modern_anthropic'
-                    logger.info("Created client with modern Anthropic SDK")
-                    return
-                except (TypeError, AttributeError) as e:
-                    logger.debug(f"Could not create modern client: {e}")
-                
-                # Legacy approach (anthropic<0.5.0)
-                try:
-                    if hasattr(anthropic, 'Client'):
-                        self._client = anthropic.Client(api_key=self.api_key)
-                        self._client_type = 'legacy_client'
-                        logger.info("Created client with legacy Anthropic SDK")
-                        return
-                except (TypeError, AttributeError) as e:
-                    logger.debug(f"Could not create legacy client: {e}")
-                
-                # Last resort - message API implementation using requests
-                logger.info("Using custom implementation via requests")
-                self._client_type = 'custom_client'
-                
-            except Exception as e:
-                logger.error(f"Failed to create any type of Claude client: {e}")
-                raise
+        Args:
+            prompt: The prompt text
+            model: Optional model to use (defaults to configured model)
+            temperature: Temperature for generation
+            max_tokens: Maximum tokens to generate
+            
+        Returns:
+            str: The generated text
+        """
+        # Use default model if none specified
+        if not model:
+            model = self.default_model
         
-        def messages_create(self, model=None, messages=None, system=None, max_tokens=1000, temperature=0.7, **kwargs):
-            """
-            Compatibility method for message creation.
+        try:
+            # Use message API
+            response = self.client.messages.create(
+                model=model,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=temperature,
+                max_tokens=max_tokens
+            )
             
-            Args:
-                model (str): The model to use.
-                messages (list): The messages to process.
-                system (str): The system prompt.
-                max_tokens (int): The maximum number of tokens to generate.
-                temperature (float): The temperature to use.
-                **kwargs: Additional parameters.
-                
-            Returns:
-                object: The API response.
-            """
-            if not model:
-                model = self.model
-                
-            if not messages:
-                messages = []
-                
-            if self._client_type == 'modern_anthropic':
-                # Modern SDK (anthropic>=0.5.0)
-                try:
-                    # FIXED: Ensure system is a string, not a list
-                    if system is not None and not isinstance(system, str):
-                        logger.warning(f"System prompt not a string: {type(system)}. Converting to string.")
-                        system = str(system)
-                        
-                    return self._client.messages.create(
-                        model=model,
-                        messages=messages,
-                        system=system,
-                        max_tokens=max_tokens,
-                        temperature=temperature,
-                        **kwargs
-                    )
-                except Exception as e:
-                    logger.error(f"Error in modern client messages call: {e}")
-                    # Fallback to direct API call
-                    logger.info("Falling back to direct API call")
+            # Extract text from response
+            if hasattr(response, 'content') and response.content:
+                return response.content[0].text
+            else:
+                logger.error("Empty response from Claude API")
+                return ""
             
-            elif self._client_type == 'legacy_client':
-                # Legacy client that might have completion but not messages
-                if hasattr(self._client, 'messages') and hasattr(self._client.messages, 'create'):
+        except Exception as e:
+            logger.error(f"Error in Claude API call: {e}")
+            
+            # Add exponential backoff for rate limits
+            if "rate limit" in str(e).lower():
+                retry_after = 2  # Start with 2 seconds
+                max_retries = 3
+                
+                for attempt in range(max_retries):
+                    logger.warning(f"Rate limited, retrying in {retry_after} seconds (attempt {attempt+1}/{max_retries})")
+                    time.sleep(retry_after)
+                    retry_after *= 2  # Exponential backoff
+                    
                     try:
-                        # FIXED: Ensure system is a string
-                        if system is not None and not isinstance(system, str):
-                            logger.warning(f"System prompt not a string: {type(system)}. Converting to string.")
-                            system = str(system)
-                            
-                        return self._client.messages.create(
+                        response = self.client.messages.create(
                             model=model,
-                            messages=messages,
-                            system=system,
-                            max_tokens=max_tokens,
+                            messages=[
+                                {"role": "user", "content": prompt}
+                            ],
                             temperature=temperature,
-                            **kwargs
+                            max_tokens=max_tokens
                         )
-                    except Exception as e:
-                        logger.error(f"Error in legacy client messages call: {e}")
-                        # Fallback to conversion to completion API
-                        logger.info("Falling back to completion API")
-                
-                # Convert messages format to completion format
-                prompt = ""
-                if system:
-                    # FIXED: Format system message correctly
-                    if isinstance(system, str):
-                        prompt += f"{system}\n\n"
-                    else:
-                        prompt += f"{str(system)}\n\n"
-                
-                for msg in messages:
-                    role = msg.get('role', '')
-                    content = msg.get('content', '')
-                    prompt += f"{role}: {content}\n\n"
-                
-                prompt += "assistant: "
-                
-                try:
-                    completion_response = self._client.completion(
-                        prompt=prompt,
-                        model=model,
-                        max_tokens_to_sample=max_tokens,
-                        temperature=temperature
-                    )
-                    
-                    # Create a response object that mimics the messages API
-                    class MessageResponse:
-                        def __init__(self, text):
-                            self.content = [{"type": "text", "text": text}]
-                    
-                    return MessageResponse(completion_response.completion)
-                except Exception as e:
-                    logger.error(f"Error in completion fallback: {e}")
-                    # Fallback to direct API call
-                    logger.info("Falling back to direct API call")
+                        
+                        if hasattr(response, 'content') and response.content:
+                            return response.content[0].text
+                    except Exception as retry_error:
+                        logger.error(f"Retry {attempt+1} failed: {retry_error}")
             
-            # Custom direct API implementation as a last resort
-            import requests
-            import json
-            
-            url = "https://api.anthropic.com/v1/messages"
-            headers = {
-                "Content-Type": "application/json",
-                "x-api-key": self.api_key,
-                "anthropic-version": "2023-06-01"
-            }
-            
-            # FIXED: Ensure data structure is correct for the API
-            data = {
-                "model": model,
-                "max_tokens": max_tokens,
-                "temperature": temperature,
-                "messages": messages
-            }
-            
-            # FIXED: Ensure system is a string, not a list
-            if system is not None:
-                if isinstance(system, str):
-                    data["system"] = system
-                else:
-                    data["system"] = str(system)
-            
-            try:
-                logger.debug(f"Making direct API call with data: {json.dumps(data)[:500]}...")
-                response = requests.post(url, headers=headers, json=data)
-                response.raise_for_status()
-                result = response.json()
-                
-                # Create a response object similar to what the client would return
-                class MessageResponse:
-                    def __init__(self, content):
-                        self.content = content
-                
-                # Extract the content from the response
-                content = result.get("content", [])
-                return MessageResponse(content)
-                
-            except Exception as e:
-                logger.error(f"Error in direct API call: {e}")
-                
-                # FIXED: Better error handling with context
-                logger.error(f"API Response status: {getattr(response, 'status_code', 'Unknown')}")
-                logger.error(f"API Response text: {getattr(response, 'text', 'Unknown')[:500]}")
-                
-                # Return a default response object if all else fails
-                class MessageResponse:
-                    def __init__(self):
-                        self.content = [{"type": "text", "text": "I'm sorry, I couldn't process your request due to an API error."}]
-                
-                return MessageResponse()
+            # Return empty string if all retries failed
+            return ""
     
-    # Create and return the client wrapper
-    try:
-        client = ClaudeClientWrapper()
-        logger.info("Successfully created Claude client wrapper")
-        return client
-    except Exception as e:
-        logger.error(f"Failed to create Claude client wrapper: {e}")
-        raise
+    def generate_response(self, query: str, memories: Dict[str, List[Dict[str, Any]]], 
+                        conversation: Optional[Dict[str, Any]] = None,
+                        model: Optional[str] = None) -> str:
+        """
+        Generate a response using memories as context.
+        
+        Args:
+            query: The user query
+            memories: Retrieved relevant memories
+            conversation: Optional current conversation
+            model: Optional model to use
+            
+        Returns:
+            str: The generated response
+        """
+        # Use default model if none specified
+        if not model:
+            model = self.default_model
+        
+        # Prepare conversation context (last few messages)
+        conversation_context = ""
+        if conversation and conversation.get("messages"):
+            # Get all messages EXCEPT the current query
+            messages = conversation.get("messages", [])
+            
+            # For newly created conversations, we might only have the current query
+            if len(messages) > 1:
+                context_messages = messages[:-1]  # Exclude the current query
+                
+                # Format conversation context
+                conversation_context = "Recent conversation history:\n"
+                for msg in context_messages[-5:]:  # Last 5 previous messages
+                    role = msg.get("role", "")
+                    content = msg.get("content", "")
+                    conversation_context += f"{role.capitalize()}: {content}\n"
+        
+        # Format memories by type
+        memory_context = self._format_memories_for_context(memories)
+        
+        # Prepare the prompt
+        prompt = f"""
+        You are Claude, a helpful AI assistant with access to a memory system that stores past conversations and information.
+        
+        {memory_context}
+        
+        {conversation_context}
+        
+        Current user message: {query}
+        
+        Please provide a helpful response. If the memory context contains information relevant to the query, incorporate it naturally.
+        If you're accessing information from memory, only mention this fact if it's directly relevant to do so.
+        
+        For example, if the user asks "What did we talk about last time?" or "Do you remember X?", then you should explicitly reference
+        retrieving that information from memory. Otherwise, just use the memory naturally without drawing attention to the fact
+        that you've remembered something.
+        
+        If this is a brand new conversation with no prior history, don't claim to "recall" or "remember" anything.
+        
+        Maintain a natural, helpful, and conversational tone.
+        """
+        
+        # Generate response
+        response = self.complete(
+            prompt=prompt,
+            model=model,
+            temperature=0.7,  # Slightly higher temperature for more natural responses
+            max_tokens=1000
+        )
+        
+        return response
+    
+    def _format_memories_for_context(self, memories: Dict[str, List[Dict[str, Any]]]) -> str:
+        """
+        Format retrieved memories for inclusion in prompt context.
+        
+        Args:
+            memories: Dictionary with different types of memories
+            
+        Returns:
+            str: Formatted context string
+        """
+        # Initialize context sections
+        context_parts = []
+        
+        # Add conversation memory context if available (excluding current conversation)
+        conversation_memories = memories.get("conversations", [])
+        if conversation_memories:
+            conversation_section = "Relevant past conversations:\n"
+            for i, conv in enumerate(conversation_memories, 1):
+                title = conv.get("title", "Untitled conversation")
+                summary = conv.get("summary", "No summary available")
+                conversation_section += f"{i}. {title}: {summary}\n"
+                
+                # Add a couple of key messages if available
+                messages = conv.get("messages", [])
+                if messages:
+                    # Extract 2-3 representative messages to give more context
+                    if len(messages) > 4:
+                        # Get 3 evenly distributed messages from the conversation
+                        indices = [len(messages) // 4, len(messages) // 2, 3 * len(messages) // 4]
+                        sample_messages = [messages[i] for i in indices]
+                    else:
+                        sample_messages = messages
+                    
+                    conversation_section += "   Sample messages:\n"
+                    for msg in sample_messages:
+                        role = msg.get("role", "").capitalize()
+                        content = msg.get("content", "")
+                        # Truncate very long messages
+                        if len(content) > 100:
+                            content = content[:100] + "..."
+                        conversation_section += f"   - {role}: {content}\n"
+            
+            context_parts.append(conversation_section)
+        
+        # Add episodic memory context if available
+        episodic_memories = memories.get("episodic", [])
+        if episodic_memories:
+            episodic_section = "Relevant past interactions and events:\n"
+            for i, mem in enumerate(episodic_memories, 1):
+                content = mem.get("content", "No content available")
+                episodic_section += f"{i}. {content}\n"
+            
+            context_parts.append(episodic_section)
+        
+        # Add non-episodic memory context if available
+        non_episodic_memories = memories.get("non_episodic", [])
+        if non_episodic_memories:
+            non_episodic_section = "Relevant facts and information:\n"
+            for i, mem in enumerate(non_episodic_memories, 1):
+                content = mem.get("content", "No content available")
+                non_episodic_section += f"{i}. {content}\n"
+            
+            context_parts.append(non_episodic_section)
+        
+        # Combine all context parts
+        if context_parts:
+            return "MEMORY CONTEXT:\n" + "\n".join(context_parts) + "\n"
+        else:
+            return "MEMORY CONTEXT: No relevant memories found.\n"

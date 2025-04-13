@@ -1,0 +1,28 @@
+{
+  "name": "establishment",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "The term \"establishment\" in this context refers to a retail business location, specifically a pet shop. It is a commercial venue that sells animals and pet-related products, though explicitly not slugs in this case.",
+        "memory_id": null,
+        "date": "2025-04-13T19:58:30.380029",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:58:30.380029"
+    ]
+  },
+  "related_concepts": {
+    "pet shop": "co-occurs",
+    "owner": "co-occurs",
+    "slugs": "co-occurs",
+    "jim": "co-occurs"
+  },
+  "tags": [
+    "establishment"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:58:40.084837"
+}

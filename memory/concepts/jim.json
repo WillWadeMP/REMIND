@@ -1,0 +1,35 @@
+{
+  "name": "jim",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "Jim is a pet shop owner who does not sell slugs in his establishment.",
+        "memory_id": null,
+        "date": "2025-04-13T19:58:30.380029",
+        "tone": "unclear"
+      },
+      {
+        "text": "There is not enough meaningful information about \"Jim\" from this brief negative reference to construct any factual knowledge or traits about who/what Jim is.",
+        "memory_id": null,
+        "date": "2025-04-13T20:00:06.721886",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:58:30.380029",
+      "2025-04-13T20:00:06.721886"
+    ]
+  },
+  "related_concepts": {
+    "pet shop": "co-occurs",
+    "owner": "co-occurs",
+    "establishment": "co-occurs",
+    "slugs": "co-occurs"
+  },
+  "tags": [
+    "jim"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T20:00:10.194273"
+}

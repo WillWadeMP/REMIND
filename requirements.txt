@@ -1,15 +1,12 @@
-# Core dependencies
-anthropic = 0.49.0
+anthropic
 flask==2.3.3
 python-dotenv==1.0.0
 requests==2.31.0
-
-# Utility libraries
-pytz==2023.3
+numpy==1.24.3
+scikit-learn==1.3.0
+sentence-transformers==2.2.2
+transformers==4.36.0
+pandas==2.0.3
+nltk==3.8.1
 python-dateutil==2.8.2
-
-# Development tools
-pytest==7.4.0
-pytest-cov==4.1.0
-black==23.7.0
-flake8==6.1.0
+tqdm==4.66.1

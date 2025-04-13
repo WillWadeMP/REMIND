@@ -1,145 +1,208 @@
 """
-Utility functions for the REMIND system.
+Utility functions for REMIND system.
 """
-import re
-import json
 import logging
-import os
-from datetime import datetime, timedelta
+import re
+import string
+from datetime import datetime
+from typing import List, Dict, Any, Optional
+
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+
 import config
 
 logger = logging.getLogger(__name__)
 
-def extract_dates_from_text(text):
+# Download necessary NLTK data
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', quiet=True)
+
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords', quiet=True)
+
+def clean_text(text: str) -> str:
     """
-    Extract dates from text using regular expressions.
+    Clean text by removing extra whitespace and normalizing.
     
     Args:
-        text (str): The text to extract dates from.
+        text: Input text
         
     Returns:
-        list: A list of date strings found in the text.
+        str: Cleaned text
     """
-    # Common date formats
+    # Remove extra whitespace
+    text = re.sub(r'\s+', ' ', text)
+    
+    # Remove leading/trailing whitespace
+    text = text.strip()
+    
+    # Remove excessive punctuation
+    text = re.sub(r'[^\w\s\.\,\!\?\-\:]', '', text)
+    
+    return text
+
+def extract_keywords(text: str, max_keywords: int = 10) -> List[str]:
+    """
+    Extract important keywords from text.
+    
+    Args:
+        text: Input text
+        max_keywords: Maximum number of keywords to extract
+        
+    Returns:
+        List[str]: List of extracted keywords
+    """
+    # Clean and normalize text
+    text = clean_text(text.lower())
+    
+    # Tokenize
+    tokens = word_tokenize(text)
+    
+    # Remove stopwords and punctuation
+    stop_words = set(stopwords.words('english')).union(config.STOPWORDS)
+    tokens = [token for token in tokens if token not in stop_words and token not in string.punctuation]
+    
+    # Count word frequencies
+    word_freq = {}
+    for token in tokens:
+        word_freq[token] = word_freq.get(token, 0) + 1
+    
+    # Sort by frequency (most frequent first)
+    sorted_words = sorted(word_freq.items(), key=lambda x: x[1], reverse=True)
+    
+    # Extract top keywords
+    keywords = [word for word, freq in sorted_words[:max_keywords]]
+    
+    # Extract significant phrases (bigrams)
+    bigrams = []
+    for i in range(len(tokens) - 1):
+        if tokens[i] not in stop_words and tokens[i+1] not in stop_words:
+            bigram = f"{tokens[i]} {tokens[i+1]}"
+            bigrams.append(bigram)
+    
+    # Count bigram frequencies
+    bigram_freq = {}
+    for bigram in bigrams:
+        bigram_freq[bigram] = bigram_freq.get(bigram, 0) + 1
+    
+    # Sort by frequency (most frequent first)
+    sorted_bigrams = sorted(bigram_freq.items(), key=lambda x: x[1], reverse=True)
+    
+    # Extract top bigrams
+    top_bigrams = [bigram for bigram, freq in sorted_bigrams[:5]]
+    
+    # Combine keywords and bigrams, ensure we don't exceed max_keywords
+    combined = keywords + top_bigrams
+    return combined[:max_keywords]
+
+def extract_dates(text: str) -> List[str]:
+    """
+    Extract dates mentioned in text.
+    
+    Args:
+        text: Input text
+        
+    Returns:
+        List[str]: List of extracted date strings
+    """
+    # Common date patterns
     date_patterns = [
         # MM/DD/YYYY or DD/MM/YYYY
         r'\b\d{1,2}/\d{1,2}/\d{2,4}\b',
         # YYYY-MM-DD
         r'\b\d{4}-\d{1,2}-\d{1,2}\b',
         # Month DD, YYYY
-        r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[.,]? \d{1,2}(?:st|nd|rd|th)?[.,]? \d{2,4}\b',
+        r'\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4}\b',
         # DD Month YYYY
-        r'\b\d{1,2}(?:st|nd|rd|th)? (?:of )?(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[.,]? \d{2,4}\b',
-        # Today, yesterday, tomorrow
-        r'\b(?:today|yesterday|tomorrow)\b',
-        # Next/last week/month/year
-        r'\b(?:next|last) (?:week|month|year)\b',
-        # X days/weeks/months/years ago
-        r'\b\d+ (?:day|week|month|year)s? ago\b'
+        r'\b\d{1,2}(?:st|nd|rd|th)?\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{4}\b'
     ]
     
-    all_dates = []
+    # Find all date matches
+    dates = []
     for pattern in date_patterns:
-        matches = re.findall(pattern, text, re.IGNORECASE)
-        all_dates.extend(matches)
+        dates.extend(re.findall(pattern, text, re.IGNORECASE))
     
-    return all_dates
+    return dates
 
-def save_to_json_file(data, file_path):
+def format_timestamp(timestamp: str, format: str = "%Y-%m-%d %H:%M") -> str:
     """
-    Save data to a JSON file.
+    Format ISO timestamp to human-readable format.
     
     Args:
-        data (dict): The data to save.
-        file_path (str): The path to the file.
+        timestamp: ISO format timestamp
+        format: Output format
+        
+    Returns:
+        str: Formatted timestamp
     """
     try:
-        # Ensure the directory exists
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
-        
-        logger.debug(f"Data saved to {file_path}")
-    except Exception as e:
-        logger.error(f"Error saving data to {file_path}: {e}")
+        dt = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+        return dt.strftime(format)
+    except (ValueError, AttributeError):
+        return timestamp
 
-def load_from_json_file(file_path):
+def truncate_text(text: str, max_length: int = 100) -> str:
     """
-    Load data from a JSON file.
+    Truncate text to specified length.
     
     Args:
-        file_path (str): The path to the file.
+        text: Input text
+        max_length: Maximum length
         
     Returns:
-        dict: The loaded data, or None if the file doesn't exist or can't be loaded.
+        str: Truncated text
     """
-    if not os.path.exists(file_path):
-        logger.debug(f"File does not exist: {file_path}")
-        return None
+    if len(text) <= max_length:
+        return text
     
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        logger.debug(f"Data loaded from {file_path}")
-        return data
-    except Exception as e:
-        logger.error(f"Error loading data from {file_path}: {e}")
-        return None
+    # Try to truncate at a sentence boundary
+    sentences = re.split(r'(?<=[.!?])\s+', text)
+    truncated = ""
+    
+    for sentence in sentences:
+        if len(truncated) + len(sentence) <= max_length:
+            truncated += sentence + " "
+        else:
+            break
+    
+    # If no complete sentence fits, truncate at word boundary
+    if not truncated:
+        words = text[:max_length].split()
+        truncated = " ".join(words[:-1]) if len(words) > 1 else words[0]
+    
+    return truncated.strip() + "..."
 
-def list_files_in_directory(directory, extension=None):
+def merge_tags(tag_lists: List[List[str]], max_tags: int = 10) -> List[str]:
     """
-    List all files in a directory, optionally filtered by extension.
+    Merge multiple tag lists with deduplication.
     
     Args:
-        directory (str): The directory to list files from.
-        extension (str, optional): The file extension to filter by (e.g., '.json').
+        tag_lists: List of tag lists to merge
+        max_tags: Maximum number of tags in result
         
     Returns:
-        list: A list of file paths.
+        List[str]: Merged tag list
     """
-    if not os.path.exists(directory):
-        logger.debug(f"Directory does not exist: {directory}")
-        return []
+    # Flatten all tag lists
+    all_tags = []
+    for tag_list in tag_lists:
+        all_tags.extend(tag_list)
     
-    files = []
-    for root, _, filenames in os.walk(directory):
-        for filename in filenames:
-            if extension is None or filename.endswith(extension):
-                files.append(os.path.join(root, filename))
+    # Count tag frequencies
+    tag_freq = {}
+    for tag in all_tags:
+        tag_freq[tag] = tag_freq.get(tag, 0) + 1
     
-    return files
-
-def get_days_since_timestamp(timestamp_str):
-    """
-    Calculate the number of days since a timestamp.
+    # Sort by frequency (most frequent first)
+    sorted_tags = sorted(tag_freq.items(), key=lambda x: x[1], reverse=True)
     
-    Args:
-        timestamp_str (str): An ISO format timestamp string.
-        
-    Returns:
-        float: The number of days since the timestamp, or None if the timestamp is invalid.
-    """
-    try:
-        timestamp = datetime.fromisoformat(timestamp_str)
-        now = datetime.now()
-        delta = now - timestamp
-        return delta.total_seconds() / (60 * 60 * 24)  # Convert seconds to days
-    except (ValueError, TypeError) as e:
-        logger.error(f"Error calculating days since timestamp {timestamp_str}: {e}")
-        return None
-
-def generate_unique_filename(prefix, extension='.json'):
-    """
-    Generate a unique filename using the current timestamp.
+    # Extract top tags
+    top_tags = [tag for tag, freq in sorted_tags[:max_tags]]
     
-    Args:
-        prefix (str): The filename prefix.
-        extension (str, optional): The file extension. Defaults to '.json'.
-        
-    Returns:
-        str: A unique filename.
-    """
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-    return f"{prefix}_{timestamp}{extension}"
+    return top_tags

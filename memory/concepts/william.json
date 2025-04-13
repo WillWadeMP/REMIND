@@ -1,0 +1,42 @@
+{
+  "name": "william",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "William is physically disabled, lacking both legs.",
+        "memory_id": null,
+        "date": "2025-04-13T19:48:22.579927",
+        "tone": "unclear"
+      },
+      {
+        "text": "William is a pet slug purchased from a pet shop.",
+        "memory_id": null,
+        "date": "2025-04-13T19:48:47.778114",
+        "tone": "unclear"
+      },
+      {
+        "text": "This memory contains only a question about William being legless, but lacks any context or confirmation about whether this is actually true. Without additional information, I cannot make factual claims about William's physical condition.",
+        "memory_id": null,
+        "date": "2025-04-13T19:49:31.192954",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:48:22.579927",
+      "2025-04-13T19:48:47.778114",
+      "2025-04-13T19:49:31.192954"
+    ]
+  },
+  "related_concepts": {
+    "legs": "co-occurs",
+    "pet slug": "co-occurs",
+    "pet shop": "co-occurs",
+    "slug": "co-occurs"
+  },
+  "tags": [
+    "william"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:49:35.451918"
+}

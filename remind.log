@@ -364,3 +364,1219 @@ Traceback (most recent call last):
                                                                                  ^^^^^^^^^^^^^^^^
 AttributeError: module 'config' has no attribute 'STOPWORDS'
 2025-04-13 14:05:17,441 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 14:05:17] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-13 14:44:54,373 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 14:44:54,374 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 14:44:54,374 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 14:46:21,449 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 14:46:21,449 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 14:46:21,450 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:03:16,395 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:03:16,395 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:03:16,397 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:03:16,698 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:03:16,698 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 15:03:16,950 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:03:16,951 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 15:04:22,602 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:04:22,603 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:04:22,603 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:04:22,910 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:04:22,910 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 15:04:23,135 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:04:23,135 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 15:04:23,221 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 15:04:23,239 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 15:04:23,239 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 15:04:27,705 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:27] "GET / HTTP/1.1" 200 -
+2025-04-13 15:04:27,781 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-13 15:04:27,782 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:27] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-04-13 15:04:28,078 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:28] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:04:28,078 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:28] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:04:28,079 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:28] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:04:28,080 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:28] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:04:28,083 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:28] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 15:04:39,431 - src.memory_manager - INFO - Created new conversation: conv_20250413150439_e6bcf361
+2025-04-13 15:04:40,022 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-04-13 15:04:40,023 - src.claude_client - ERROR - Error in Claude API call: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-04-13 15:04:40,196 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-04-13 15:04:40,196 - src.claude_client - ERROR - Error in Claude API call: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-04-13 15:04:40,196 - src.memory_processor - WARNING - Falling back to default metadata generation
+2025-04-13 15:04:40,197 - src.memory_manager - INFO - Updated metadata for conversation: conv_20250413150439_e6bcf361
+2025-04-13 15:04:40,320 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-04-13 15:04:40,321 - src.claude_client - ERROR - Error in Claude API call: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-04-13 15:04:40,321 - src.memory_processor - WARNING - Falling back to default memory extraction
+2025-04-13 15:04:40,331 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:40] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:04:40,337 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:40] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:04:40,337 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:40] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:04:59,146 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-04-13 15:04:59,146 - src.claude_client - ERROR - Error in Claude API call: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-04-13 15:04:59,154 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:59] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:04:59,159 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:59] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:04:59,159 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:04:59] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:07:05,557 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:07:05,558 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:07:05,558 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:07:05,865 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:07:05,865 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 15:07:06,088 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:07:06,088 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 15:07:06,229 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 15:07:06,245 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 15:07:06,246 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 15:07:07,900 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:07] "GET / HTTP/1.1" 200 -
+2025-04-13 15:07:07,955 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:07:07,966 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:07:08,267 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:08] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:07:08,267 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:08] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:07:08,268 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:08] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:07:08,270 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:08] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:07:08,271 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:08] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 15:07:13,214 - src.memory_manager - INFO - Created new conversation: conv_20250413150713_2790cbeb
+2025-04-13 15:07:14,575 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:07:17,106 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:07:17,108 - src.memory_manager - INFO - Updated metadata for conversation: conv_20250413150713_2790cbeb
+2025-04-13 15:07:21,008 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:07:21,018 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:21] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:07:21,025 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:21] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:07:21,026 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:21] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:07:38,391 - src.memory_manager - INFO - Created new conversation: conv_20250413150738_cae962d6
+2025-04-13 15:07:40,184 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:07:42,735 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:07:42,737 - src.memory_manager - INFO - Updated metadata for conversation: conv_20250413150738_cae962d6
+2025-04-13 15:07:48,098 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:07:48,112 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:48] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:07:48,120 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:48] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:07:48,121 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:07:48] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:08:08,844 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:08] "GET / HTTP/1.1" 200 -
+2025-04-13 15:08:08,878 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:08:08,882 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:08:08,950 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:08] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:08:08,952 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:08] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:08:08,952 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:08] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:08:08,967 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:08] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:08:08,968 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:08] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 15:08:30,679 - src.memory_manager - INFO - Created new conversation: conv_20250413150830_80589eae
+2025-04-13 15:08:32,078 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:08:35,429 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:08:35,430 - src.memory_manager - INFO - Updated metadata for conversation: conv_20250413150830_80589eae
+2025-04-13 15:08:38,833 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:08:38,847 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:38] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:08:38,855 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:38] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:08:38,856 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:08:38] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:09:14,093 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:09:14,105 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:14] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:09:14,112 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:14] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:09:14,112 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:14] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:09:33,319 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:09:33,330 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:33] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:09:33,337 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:33] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:09:33,338 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:33] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:09:41,015 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:09:41,028 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:41] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:09:41,035 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:41] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:09:41,037 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:41] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:09:47,039 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:09:47,051 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:47] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:09:47,058 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:47] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:09:47,060 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:09:47] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:24:12,042 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:24:12,043 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:24:12,043 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:24:12,358 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:24:12,359 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 15:24:12,359 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 15:24:12,460 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 15:24:12,477 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 15:24:12,477 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 15:24:15,266 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:15] "GET / HTTP/1.1" 200 -
+2025-04-13 15:24:15,362 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:24:15,362 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:24:15,829 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:15] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:24:15,830 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:15] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:24:15,830 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:15] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:24:15,831 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:15] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:24:15,833 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:15] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 15:24:23,089 - web.app - ERROR - Exception on /api/chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 49, in chat
+    conversation_id = memory_manager.create_conversation(message)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryManager' object has no attribute 'create_conversation'
+2025-04-13 15:24:23,090 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:24:23] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-13 15:25:43,019 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:43] "GET / HTTP/1.1" 200 -
+2025-04-13 15:25:43,220 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:25:43,223 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:25:43,243 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:43] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:25:43,244 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:43] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:25:43,244 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:43] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:25:43,250 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:43] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:25:43,255 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:43] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 15:25:46,941 - web.app - ERROR - Exception on /api/chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 49, in chat
+    conversation_id = memory_manager.create_conversation(message)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryManager' object has no attribute 'create_conversation'
+2025-04-13 15:25:46,943 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:25:46] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-13 15:25:56,701 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:25:56,702 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:25:56,702 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:25:56,980 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:25:56,981 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 15:25:56,981 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 15:25:57,090 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 15:25:57,102 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 15:25:57,102 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 15:26:00,610 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:00] "GET / HTTP/1.1" 200 -
+2025-04-13 15:26:00,680 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:26:00,690 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:26:00,783 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:00] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:26:00,784 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:00] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:26:00,784 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:00] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:26:00,791 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:00] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:26:00,791 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:00] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 15:26:05,136 - web.app - ERROR - Exception on /api/chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 49, in chat
+    conversation_id = memory_manager.create_conversation(message)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 41, in create_conversation
+    conversation = self.processor.process_conversation(messages, metadata)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_processor.py", line 42, in process_conversation
+    conversation_text = self._create_conversation_text(messages)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_processor.py", line 87, in _create_conversation_text
+    role = message.get("role", "unknown")
+           ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-04-13 15:26:05,141 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:05] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-13 15:26:55,869 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:26:55,870 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:26:55,870 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:26:56,121 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:26:56,122 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 15:26:56,122 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 15:26:56,202 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 15:26:56,213 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 15:26:56,213 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 15:26:56,364 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:56] "GET / HTTP/1.1" 200 -
+2025-04-13 15:26:56,443 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:26:56,451 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:26:56,482 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:56] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:26:56,484 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:56] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 15:26:56,485 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:56] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:26:56,486 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:56] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:26:56,491 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:56] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 15:26:59,485 - web.app - ERROR - Exception on /api/chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 49, in chat
+    conversation_id = memory_manager.create_conversation(message)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryManager' object has no attribute 'create_conversation'
+2025-04-13 15:26:59,487 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:26:59] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-13 15:29:07,296 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:29:07,296 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:29:07,296 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:29:07,558 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:29:07,559 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 15:29:07,559 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 15:29:07,890 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:29:07,891 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 15:29:07,903 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 15:29:07,904 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 15:29:09,800 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:09] "GET / HTTP/1.1" 200 -
+2025-04-13 15:29:09,885 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:29:09,887 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:29:09,925 - web.app - ERROR - Exception on /api/memories [GET]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 194, in get_memories
+    memory_counts = memory_manager.get_memory_counts()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 129, in get_memory_counts
+    return self.storage.get_memory_counts()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryStorage' object has no attribute 'get_memory_counts'
+2025-04-13 15:29:09,927 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:09] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:29:09,928 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:09] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:29:09,929 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:09] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:29:09,929 - web.app - ERROR - Exception on /api/tags [GET]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 220, in get_tags
+    tags = memory_manager.get_all_tags()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 138, in get_all_tags
+    return self.storage.get_all_tags()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryStorage' object has no attribute 'get_all_tags'
+2025-04-13 15:29:09,930 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:09] "[35m[1mGET /api/memories HTTP/1.1[0m" 500 -
+2025-04-13 15:29:09,932 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:09] "[35m[1mGET /api/tags HTTP/1.1[0m" 500 -
+2025-04-13 15:29:15,829 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:29:17,099 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:29:18,625 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:29:18,626 - src.memory_processor - INFO - Processed conversation: Heres a concise title for the conversation: Williams Fondness for Aquatic Creatures
+2025-04-13 15:29:18,626 - web.app - ERROR - Error in chat endpoint: Conversation must have an id
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 53, in chat
+    conversation = memory_manager.add_conversation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 44, in add_conversation
+    conversation_id = self.storage.save_conversation(conversation)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_storage.py", line 47, in save_conversation
+    raise ValueError("Conversation must have an id")
+ValueError: Conversation must have an id
+2025-04-13 15:29:18,628 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:29:18] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-13 15:32:32,243 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:32:32,243 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 15:32:32,243 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 15:32:32,517 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:32:32,518 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 15:32:32,518 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 15:32:32,835 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:32:32,836 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 15:32:32,850 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 15:32:32,852 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 15:32:33,706 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:33] "GET / HTTP/1.1" 200 -
+2025-04-13 15:32:33,777 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:32:33,785 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:32:33,830 - web.app - ERROR - Exception on /api/memories [GET]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 194, in get_memories
+    memory_counts = memory_manager.get_memory_counts()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 135, in get_memory_counts
+    return self.storage.get_memory_counts()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryStorage' object has no attribute 'get_memory_counts'
+2025-04-13 15:32:33,833 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:33] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:32:33,834 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:33] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:32:33,837 - web.app - ERROR - Exception on /api/tags [GET]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 220, in get_tags
+    tags = memory_manager.get_all_tags()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 144, in get_all_tags
+    return self.storage.get_all_tags()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryStorage' object has no attribute 'get_all_tags'
+2025-04-13 15:32:33,837 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:33] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:32:33,838 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:33] "[35m[1mGET /api/memories HTTP/1.1[0m" 500 -
+2025-04-13 15:32:33,839 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:33] "[35m[1mGET /api/tags HTTP/1.1[0m" 500 -
+2025-04-13 15:32:39,611 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:32:40,527 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:32:42,284 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:32:42,286 - src.memory_processor - INFO - Processed conversation: Heres a concise, descriptive title for the conversation: Williams Fondness for Aquatic Creatures
+2025-04-13 15:32:42,287 - src.memory_manager - INFO - Added conversation: 206a5749-0d35-4fa3-8667-98397763aeba
+2025-04-13 15:32:42,604 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:32:43,566 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:32:46,312 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:32:47,756 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:32:48,453 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:32:52,208 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:32:52,209 - src.memory_processor - INFO - Processed conversation: Williams Simple Fish Preference
+2025-04-13 15:32:52,210 - src.memory_manager - INFO - Updated conversation: 206a5749-0d35-4fa3-8667-98397763aeba
+2025-04-13 15:32:52,210 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:52] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:32:52,216 - web.app - ERROR - Exception on /api/memories [GET]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 194, in get_memories
+    memory_counts = memory_manager.get_memory_counts()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 135, in get_memory_counts
+    return self.storage.get_memory_counts()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryStorage' object has no attribute 'get_memory_counts'
+2025-04-13 15:32:52,218 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:52] "[35m[1mGET /api/memories HTTP/1.1[0m" 500 -
+2025-04-13 15:32:52,233 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:32:52] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:33:13,908 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:13] "GET / HTTP/1.1" 200 -
+2025-04-13 15:33:13,943 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 15:33:13,945 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 15:33:14,022 - web.app - ERROR - Exception on /api/memories [GET]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 194, in get_memories
+    memory_counts = memory_manager.get_memory_counts()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 135, in get_memory_counts
+    return self.storage.get_memory_counts()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryStorage' object has no attribute 'get_memory_counts'
+2025-04-13 15:33:14,024 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:14] "[35m[1mGET /api/memories HTTP/1.1[0m" 500 -
+2025-04-13 15:33:14,027 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:14] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 15:33:14,027 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:14] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 15:33:14,029 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:14] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 15:33:14,031 - web.app - ERROR - Exception on /api/tags [GET]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 220, in get_tags
+    tags = memory_manager.get_all_tags()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 144, in get_all_tags
+    return self.storage.get_all_tags()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryStorage' object has no attribute 'get_all_tags'
+2025-04-13 15:33:14,034 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:14] "[35m[1mGET /api/tags HTTP/1.1[0m" 500 -
+2025-04-13 15:33:21,991 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:33:22,852 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:33:24,274 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:33:24,275 - src.memory_processor - INFO - Processed conversation: Heres a concise, descriptive title for the conversation: Williams Preferences and Personal Interests
+2025-04-13 15:33:24,276 - src.memory_manager - INFO - Added conversation: 99bd92b5-8576-4bce-a8cd-62aebc9e22ff
+2025-04-13 15:33:24,515 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 15:33:25,551 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:33:27,355 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:33:29,800 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:33:31,278 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:33:34,147 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 15:33:34,153 - src.memory_processor - INFO - Processed conversation: Heres a concise, descriptive title for this conversation: Unidentified Williams Unknown Personal Preferences
+2025-04-13 15:33:34,154 - src.memory_manager - INFO - Updated conversation: 99bd92b5-8576-4bce-a8cd-62aebc9e22ff
+2025-04-13 15:33:34,155 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:34] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 15:33:34,161 - web.app - ERROR - Exception on /api/memories [GET]
+Traceback (most recent call last):
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\web\app.py", line 194, in get_memories
+    memory_counts = memory_manager.get_memory_counts()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Will\OneDrive\Documents\GitHub\REMIND\src\memory_manager.py", line 135, in get_memory_counts
+    return self.storage.get_memory_counts()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryStorage' object has no attribute 'get_memory_counts'
+2025-04-13 15:33:34,163 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:34] "[35m[1mGET /api/memories HTTP/1.1[0m" 500 -
+2025-04-13 15:33:34,176 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 15:33:34] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:43:45,222 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 18:43:45,222 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 18:43:45,223 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 18:43:45,601 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:43:45,602 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 18:43:45,866 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:43:45,866 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 18:43:46,342 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:43:46,342 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 18:43:46,391 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 18:43:46,391 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 18:43:48,644 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:48] "GET / HTTP/1.1" 200 -
+2025-04-13 18:43:48,765 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 18:43:48,829 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 18:43:48,865 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:48] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:43:48,868 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:48] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 18:43:48,871 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:48] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 18:43:48,903 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:48] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:43:48,904 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:48] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 18:43:58,409 - src.memory_storage - INFO - Deleted conversation: 99bd92b5-8576-4bce-a8cd-62aebc9e22ff
+2025-04-13 18:43:58,409 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:58] "DELETE /api/conversations/99bd92b5-8576-4bce-a8cd-62aebc9e22ff HTTP/1.1" 200 -
+2025-04-13 18:43:58,415 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:58] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:43:58,417 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:43:58] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:44:01,168 - src.memory_storage - INFO - Deleted conversation: 206a5749-0d35-4fa3-8667-98397763aeba
+2025-04-13 18:44:01,168 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:01] "DELETE /api/conversations/206a5749-0d35-4fa3-8667-98397763aeba HTTP/1.1" 200 -
+2025-04-13 18:44:01,173 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:01] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:44:01,174 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:01] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:44:11,547 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:44:12,432 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:44:13,814 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:44:13,815 - src.memory_processor - INFO - Processed conversation: Heres a short, descriptive title for the conversation: Williams Fondness for Aquatic Creatures
+2025-04-13 18:44:13,816 - src.memory_manager - INFO - Added conversation: f04b066b-c48c-42ea-a349-dc3a3c6336ca
+2025-04-13 18:44:14,247 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:44:15,208 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:44:17,266 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:44:18,584 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:44:19,331 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:44:22,045 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:44:22,046 - src.memory_processor - INFO - Processed conversation: Heres a concise title for this conversation: Williams Fondness for Fish
+2025-04-13 18:44:22,048 - src.memory_manager - INFO - Updated conversation: f04b066b-c48c-42ea-a349-dc3a3c6336ca
+2025-04-13 18:44:22,048 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:22] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 18:44:22,054 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:22] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:44:22,064 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:22] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:44:47,931 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:47] "GET / HTTP/1.1" 200 -
+2025-04-13 18:44:47,972 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 18:44:47,978 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 18:44:48,043 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:48] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:44:48,044 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:48] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:44:48,044 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:48] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 18:44:48,047 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:48] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 18:44:48,051 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:44:48] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 18:45:27,390 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:45:28,705 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:45:30,328 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:45:30,328 - src.memory_processor - INFO - Processed conversation: Heres a concise, descriptive title for the conversation: Williams Preferences: Seeking Personal Insights
+2025-04-13 18:45:30,329 - src.memory_manager - INFO - Added conversation: 1a9dcdea-4bd9-47a3-b51e-7aa66c61658b
+2025-04-13 18:45:30,707 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:45:32,182 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-04-13 18:45:32,183 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.396819 seconds
+2025-04-13 18:45:33,949 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:45:35,642 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:45:37,115 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:45:39,087 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:45:46,737 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:45:46,738 - src.memory_processor - INFO - Processed conversation: Heres a concise, descriptive title for the conversation: Williams Preferences: Seeking Personal Information
+2025-04-13 18:45:46,738 - src.memory_manager - INFO - Updated conversation: 1a9dcdea-4bd9-47a3-b51e-7aa66c61658b
+2025-04-13 18:45:46,740 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:45:46] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 18:45:46,748 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:45:46] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:45:46,761 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:45:46] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:47:03,522 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:47:03] "GET /api/conversations/1a9dcdea-4bd9-47a3-b51e-7aa66c61658b HTTP/1.1" 200 -
+2025-04-13 18:47:06,380 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:47:06] "GET /api/conversations/f04b066b-c48c-42ea-a349-dc3a3c6336ca HTTP/1.1" 200 -
+2025-04-13 18:49:11,942 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:49:12,665 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:49:15,180 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:49:15,181 - src.memory_processor - INFO - Processed conversation: Title: Williams Enjoyment of Fish Species
+2025-04-13 18:49:15,182 - src.memory_manager - INFO - Updated conversation: f04b066b-c48c-42ea-a349-dc3a3c6336ca
+2025-04-13 18:49:15,505 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:49:16,472 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:49:18,796 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:49:20,319 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:49:21,591 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:49:24,429 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:49:24,430 - src.memory_processor - INFO - Processed conversation: Williams Fish Preference Discussed
+2025-04-13 18:49:24,432 - src.memory_manager - INFO - Updated conversation: f04b066b-c48c-42ea-a349-dc3a3c6336ca
+2025-04-13 18:49:24,432 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:49:24] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 18:49:24,441 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:49:24] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:49:24,452 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:49:24] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:50:33,113 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:50:34,053 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:50:35,904 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:50:35,905 - src.memory_processor - INFO - Processed conversation: Williams Preferences and Interests
+2025-04-13 18:50:35,906 - src.memory_manager - INFO - Added conversation: 9896913e-fa14-4146-aaac-e877abd979cc
+2025-04-13 18:50:36,189 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:50:37,275 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:50:39,166 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:50:41,030 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:50:42,390 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:50:45,548 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:50:45,549 - src.memory_processor - INFO - Processed conversation: Heres a concise, descriptive title for the conversation: No Known Details About Williams Likes
+2025-04-13 18:50:45,550 - src.memory_manager - INFO - Updated conversation: 9896913e-fa14-4146-aaac-e877abd979cc
+2025-04-13 18:50:45,551 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:50:45] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 18:50:45,560 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:50:45] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:50:45,574 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:50:45] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:51:11,951 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:51:13,077 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:51:14,366 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:51:14,367 - src.memory_processor - INFO - Processed conversation: Marine Life Enthusiasts: Who Enjoys Oceans?
+2025-04-13 18:51:14,368 - src.memory_manager - INFO - Added conversation: 5d6e9358-b5a5-4d32-911d-75e902cd1dae
+2025-04-13 18:51:14,653 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:51:16,054 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:51:18,986 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:51:20,740 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:51:21,433 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:51:24,924 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:51:24,925 - src.memory_processor - INFO - Processed conversation: Marine Life Enthusiasts and Their Interests
+2025-04-13 18:51:24,926 - src.memory_manager - INFO - Updated conversation: 5d6e9358-b5a5-4d32-911d-75e902cd1dae
+2025-04-13 18:51:24,927 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:51:24] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 18:51:24,935 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:51:24] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:51:24,950 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:51:24] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:52:03,076 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:52:03,953 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:52:05,579 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:52:05,580 - src.memory_processor - INFO - Processed conversation: Heres a short, descriptive title for the conversation: Williams Fondness for Aquatic Creatures
+2025-04-13 18:52:05,581 - src.memory_manager - INFO - Added conversation: 4eb11bfa-7f4c-4426-a036-7ef2eb063e38
+2025-04-13 18:52:05,847 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:52:07,383 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:52:09,811 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:52:11,515 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:52:12,247 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:52:16,862 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:52:16,864 - src.memory_processor - INFO - Processed conversation: Williams Fish Preference Confirmed
+2025-04-13 18:52:16,865 - src.memory_manager - INFO - Updated conversation: 4eb11bfa-7f4c-4426-a036-7ef2eb063e38
+2025-04-13 18:52:16,865 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:52:16] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 18:52:16,873 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:52:16] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:52:16,884 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:52:16] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:53:06,750 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:53:07,947 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:53:09,082 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:53:09,083 - src.memory_processor - INFO - Processed conversation: AI Reflects on Nature Conversations
+2025-04-13 18:53:09,084 - src.memory_manager - INFO - Added conversation: a18e6513-cb81-47b8-91fc-3bd72103cf13
+2025-04-13 18:53:09,366 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:53:10,510 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:53:13,232 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:53:14,866 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:53:16,071 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:53:19,760 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:53:19,761 - src.memory_processor - INFO - Processed conversation: AI Clarifies Conversation Memory Limitations
+2025-04-13 18:53:19,762 - src.memory_manager - INFO - Updated conversation: a18e6513-cb81-47b8-91fc-3bd72103cf13
+2025-04-13 18:53:19,762 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:53:19] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 18:53:19,771 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:53:19] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:53:19,783 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:53:19] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 18:54:54,415 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:54:56,074 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:54:57,864 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:54:57,866 - src.memory_processor - INFO - Processed conversation: Heres a concise title for this conversation: No Previous Context Established The title reflects that there is no prior conversation history to reference, and the user is asking about previous discussions that do not exist.
+2025-04-13 18:54:57,867 - src.memory_manager - INFO - Added conversation: 10026b04-48c5-4a6d-bc60-74ee62e2af1e
+2025-04-13 18:54:58,135 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 18:54:59,243 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:55:01,260 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:55:02,970 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:55:03,993 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:55:08,594 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 18:55:08,595 - src.memory_processor - INFO - Processed conversation: Heres a concise, descriptive title for this conversation: No Persistent Memory of Prior Chat
+2025-04-13 18:55:08,596 - src.memory_manager - INFO - Updated conversation: 10026b04-48c5-4a6d-bc60-74ee62e2af1e
+2025-04-13 18:55:08,597 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:55:08] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 18:55:08,604 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:55:08] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 18:55:08,620 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 18:55:08] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 19:02:23,991 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 19:02:23,991 - src.memory_storage - INFO - MemoryStorage initialized
+2025-04-13 19:02:23,992 - src.memory_retriever - INFO - MemoryRetriever initialized
+2025-04-13 19:02:24,341 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:02:24,341 - src.memory_processor - INFO - MemoryProcessor initialized
+2025-04-13 19:02:24,612 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:02:24,612 - src.memory_manager - INFO - MemoryManager initialized
+2025-04-13 19:02:25,014 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:02:25,014 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 19:02:25,031 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 19:02:25,031 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 19:02:26,240 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:26] "GET / HTTP/1.1" 200 -
+2025-04-13 19:02:26,327 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 19:02:26,328 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 19:02:26,503 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:26] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 19:02:26,503 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:26] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 19:02:26,505 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:26] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 19:02:26,505 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:26] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 19:02:26,507 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:26] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 19:02:33,674 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:02:34,404 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:02:35,799 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:02:35,800 - src.memory_processor - INFO - Processed conversation: Williams Preference for Fish Species
+2025-04-13 19:02:35,801 - src.memory_manager - INFO - Added conversation: f6c48b07-d8b1-4675-9c2b-4f52e1755d72
+2025-04-13 19:02:36,136 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:02:36,460 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:02:37,883 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:02:39,150 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:02:39,895 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:02:41,070 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:02:41,072 - src.memory_processor - INFO - Processed conversation: Williams Fish Preference Conversation
+2025-04-13 19:02:41,072 - src.memory_manager - INFO - Updated conversation: f6c48b07-d8b1-4675-9c2b-4f52e1755d72
+2025-04-13 19:02:41,082 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:41] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:02:41,088 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:41] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 19:02:41,089 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:02:41] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 19:03:54,739 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:03:55,755 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:03:57,402 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:03:57,404 - src.memory_processor - INFO - Processed conversation: Williams Potential Hobby Exploration Inquiry
+2025-04-13 19:03:57,405 - src.memory_manager - INFO - Added conversation: 096e6cba-7375-4635-be75-2cca93bcdb1f
+2025-04-13 19:03:57,742 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:03:58,682 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:03:59,022 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:03:59,773 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:02,063 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:03,911 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:04,718 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:13,825 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:13,827 - src.memory_processor - INFO - Processed conversation: Williams Potential Fish-Related Hobby Interest
+2025-04-13 19:04:13,828 - src.memory_manager - INFO - Updated conversation: 096e6cba-7375-4635-be75-2cca93bcdb1f
+2025-04-13 19:04:13,841 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:04:13] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:04:13,849 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:04:13] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 19:04:13,849 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:04:13] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 19:04:37,778 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:38,752 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:42,350 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:42,350 - src.memory_processor - INFO - Processed conversation: Williams Skateboarding Hobby Conversation
+2025-04-13 19:04:42,351 - src.memory_manager - INFO - Updated conversation: 096e6cba-7375-4635-be75-2cca93bcdb1f
+2025-04-13 19:04:42,688 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:04:44,775 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:45,092 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:04:48,411 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:50,892 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:04:58,530 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:05,392 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:10,516 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:10,517 - src.memory_processor - INFO - Processed conversation: Williams Skateboarding Hobby Conversation
+2025-04-13 19:05:10,518 - src.memory_manager - INFO - Updated conversation: 096e6cba-7375-4635-be75-2cca93bcdb1f
+2025-04-13 19:05:10,527 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:05:10] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:05:10,536 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:05:10] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 19:05:10,540 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:05:10] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 19:05:41,345 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:42,327 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:44,058 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:44,058 - src.memory_processor - INFO - Processed conversation: Title: Williams Food Preferences and Dietary Habits
+2025-04-13 19:05:44,059 - src.memory_manager - INFO - Added conversation: c6870ffa-1116-4b95-a859-5f2c135c8a40
+2025-04-13 19:05:44,399 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:05:45,373 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:45,720 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:05:46,844 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:49,112 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:50,931 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:51,728 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:54,923 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:05:54,924 - src.memory_processor - INFO - Processed conversation: Williams Food Preferences: Discussing Fish Interest
+2025-04-13 19:05:54,925 - src.memory_manager - INFO - Updated conversation: c6870ffa-1116-4b95-a859-5f2c135c8a40
+2025-04-13 19:05:54,935 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:05:54] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:05:54,943 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:05:54] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 19:05:54,944 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:05:54] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 19:07:24,543 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:26,633 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:34,048 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:34,049 - src.memory_processor - INFO - Processed conversation: Williams Food Preferences via Skateboarding Memories This title captures the key elements of the conversation: the focus on Williams eating habits, the hint about skateboarding as a context, and the suggestion of searching through memory for more information. Its concise, descriptive, and meets the 5-7 word requirement.
+2025-04-13 19:07:34,050 - src.memory_manager - INFO - Updated conversation: c6870ffa-1116-4b95-a859-5f2c135c8a40
+2025-04-13 19:07:34,328 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:07:41,314 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:41,559 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:07:46,774 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:49,510 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:53,299 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:55,261 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:58,421 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:07:58,422 - src.memory_processor - INFO - Processed conversation: Williams Fish Preference and Skateboarding
+2025-04-13 19:07:58,424 - src.memory_manager - INFO - Updated conversation: c6870ffa-1116-4b95-a859-5f2c135c8a40
+2025-04-13 19:07:58,436 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:07:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:07:58,444 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:07:58] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 19:07:58,446 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:07:58] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 19:54:04,142 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:54:04,142 - src.memory_manager - INFO - New MemoryManager initialized using the dynamic concept graph system.
+2025-04-13 19:54:04,529 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 19:54:04,530 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 19:54:04,550 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 19:54:04,551 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 19:54:48,962 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:54:48] "GET / HTTP/1.1" 200 -
+2025-04-13 19:54:49,047 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:54:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 19:54:49,058 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:54:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 19:54:49,356 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:54:49] "[33mGET /api/memories HTTP/1.1[0m" 404 -
+2025-04-13 19:54:49,358 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:54:49] "[33mGET /api/conversations HTTP/1.1[0m" 404 -
+2025-04-13 19:54:49,359 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:54:49] "[33mGET /api/memories?type=episodic HTTP/1.1[0m" 404 -
+2025-04-13 19:54:49,363 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:54:49] "[33mGET /api/memories?type=non_episodic HTTP/1.1[0m" 404 -
+2025-04-13 19:54:49,365 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:54:49] "[33mGET /api/tags HTTP/1.1[0m" 404 -
+2025-04-13 19:55:03,799 - src.memory_manager - INFO - Processed memory into concept nodes: ['hello', 'name', 'william', 'hello name', 'name william']
+2025-04-13 19:55:03,800 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'Hello my name is William'
+2025-04-13 19:55:05,827 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:55:05,837 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:05] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:55:05,844 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:05] "[33mGET /api/memories HTTP/1.1[0m" 404 -
+2025-04-13 19:55:05,844 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:05] "[33mGET /api/conversations HTTP/1.1[0m" 404 -
+2025-04-13 19:55:32,742 - src.memory_manager - INFO - Processed memory into concept nodes: ['okay', 'william', 'likes', 'fish', 'okay william', 'william likes', 'likes fish']
+2025-04-13 19:55:32,742 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'Okay, William likes fish'
+2025-04-13 19:55:35,376 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:55:35,377 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:35] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:55:35,383 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:35] "[33mGET /api/memories HTTP/1.1[0m" 404 -
+2025-04-13 19:55:35,384 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:35] "[33mGET /api/conversations HTTP/1.1[0m" 404 -
+2025-04-13 19:55:50,531 - src.memory_manager - INFO - Processed memory into concept nodes: ['tell', 'william', 'tell william']
+2025-04-13 19:55:50,532 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'What can you tell me about William'
+2025-04-13 19:55:58,672 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:55:58,674 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:55:58,680 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:58] "[33mGET /api/memories HTTP/1.1[0m" 404 -
+2025-04-13 19:55:58,681 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:55:58] "[33mGET /api/conversations HTTP/1.1[0m" 404 -
+2025-04-13 19:56:29,065 - src.memory_manager - INFO - Processed memory into concept nodes: ['know', 'anybody', 'likes', 'fish', 'know anybody', 'anybody likes', 'likes fish']
+2025-04-13 19:56:29,066 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'Do you know anybody who likes fish'
+2025-04-13 19:56:32,343 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 19:56:32,344 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:56:32] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 19:56:32,352 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:56:32] "[33mGET /api/memories HTTP/1.1[0m" 404 -
+2025-04-13 19:56:32,354 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 19:56:32] "[33mGET /api/conversations HTTP/1.1[0m" 404 -
+2025-04-13 20:01:52,244 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 20:01:52,244 - src.memory_manager - INFO - New MemoryManager initialized using the dynamic concept graph system.
+2025-04-13 20:02:52,767 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 20:02:52,767 - src.memory_manager - INFO - New MemoryManager initialized using the dynamic concept graph system.
+2025-04-13 20:02:52,892 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 20:02:52,909 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 20:02:52,909 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 20:02:55,383 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:02:55] "GET / HTTP/1.1" 200 -
+2025-04-13 20:02:55,441 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:02:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 20:02:55,461 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:02:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 20:02:55,778 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:02:55] "[33mGET /api/memories HTTP/1.1[0m" 404 -
+2025-04-13 20:02:55,780 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:02:55] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:02:55,781 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:02:55] "[33mGET /api/memories?type=episodic HTTP/1.1[0m" 404 -
+2025-04-13 20:02:55,782 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:02:55] "[33mGET /api/tags HTTP/1.1[0m" 404 -
+2025-04-13 20:02:55,788 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:02:55] "[33mGET /api/memories?type=non_episodic HTTP/1.1[0m" 404 -
+2025-04-13 20:03:07,790 - src.conversation_manager - INFO - Created conversation: 09eb467a-06c2-4f83-8dcd-d05ad2a5ae89
+2025-04-13 20:03:07,812 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'like', 'william like']
+2025-04-13 20:03:07,868 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'What does william like'
+2025-04-13 20:03:10,929 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:03:10,950 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:10] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:03:10,957 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:10] "[33mGET /api/memories HTTP/1.1[0m" 404 -
+2025-04-13 20:03:10,970 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:10] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:03:17,988 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:17] "GET / HTTP/1.1" 200 -
+2025-04-13 20:03:18,018 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 20:03:18,025 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 20:03:18,091 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:18] "[33mGET /api/memories HTTP/1.1[0m" 404 -
+2025-04-13 20:03:18,094 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:18] "[33mGET /api/memories?type=episodic HTTP/1.1[0m" 404 -
+2025-04-13 20:03:18,094 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:18] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:03:18,096 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:18] "[33mGET /api/memories?type=non_episodic HTTP/1.1[0m" 404 -
+2025-04-13 20:03:18,098 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:18] "[33mGET /api/tags HTTP/1.1[0m" 404 -
+2025-04-13 20:03:35,424 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:35] "[33mGET /api/search?q=a&type=conversations HTTP/1.1[0m" 404 -
+2025-04-13 20:03:35,848 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:35] "[33mGET /api/search?q=asd&type=conversations HTTP/1.1[0m" 404 -
+2025-04-13 20:03:37,486 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:37] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:03:37,877 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:37] "[33mGET /api/search?q=W&type=conversations HTTP/1.1[0m" 404 -
+2025-04-13 20:03:44,897 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:03:44] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:07:36,329 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 20:07:36,329 - src.memory_manager - INFO - New MemoryManager initialized using the dynamic concept graph system.
+2025-04-13 20:07:36,435 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 20:07:36,448 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 20:07:36,449 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 20:07:40,460 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:07:40] "GET / HTTP/1.1" 200 -
+2025-04-13 20:07:40,532 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:07:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 20:07:40,533 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:07:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 20:07:40,585 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:07:40] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 20:07:40,586 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:07:40] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:07:40,587 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:07:40] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 20:07:40,627 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:07:40] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:07:40,627 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:07:40] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 20:07:58,642 - src.conversation_manager - INFO - Created conversation: 8183943e-5738-4363-bedc-e6ff50e9d9ab
+2025-04-13 20:07:58,651 - src.memory_manager - INFO - Processed memory into concept nodes: ['far', 'person', 'run', 'day', 'far person', 'person run', 'run day']
+2025-04-13 20:07:58,651 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'How far can a person run in a day?'
+2025-04-13 20:08:04,822 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:08:04,837 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:08:04] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:08:04,858 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:08:04] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:08:04,860 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:08:04] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:08:22,909 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'cant', 'run', 'loegs', 'william cant', 'cant run', 'run loegs']
+2025-04-13 20:08:22,909 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'William can't run because he has no loegs'
+2025-04-13 20:08:26,849 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:08:26,863 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:08:26] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:08:26,882 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:08:26] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:08:26,883 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:08:26] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:09:00,618 - src.conversation_manager - INFO - Created conversation: b633bd91-7020-4c20-a552-6768a9737679
+2025-04-13 20:09:00,622 - src.memory_manager - INFO - Processed memory into concept nodes: ['far', 'william', 'run', 'far william', 'william run']
+2025-04-13 20:09:00,623 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'How far can William run?'
+2025-04-13 20:09:03,626 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:09:03,639 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:03] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:09:03,657 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:03] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:09:03,657 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:03] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:09:27,841 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:27] "GET / HTTP/1.1" 200 -
+2025-04-13 20:09:27,878 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 20:09:27,880 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 20:09:27,950 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:27] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:09:27,951 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:27] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 20:09:27,951 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:27] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:09:27,952 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:27] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 20:09:27,958 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:27] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 20:09:36,106 - src.conversation_manager - INFO - Created conversation: 018cc0a3-40fe-449c-b229-27d3f4c1724d
+2025-04-13 20:09:36,108 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'legs', 'william legs']
+2025-04-13 20:09:36,109 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'William has no legs'
+2025-04-13 20:09:39,455 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:09:39,464 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:39] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:09:39,480 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:39] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:09:39,481 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:39] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:09:53,780 - src.memory_manager - INFO - Processed memory into concept nodes: ['im', 'letting', 'konw', 'im letting', 'letting konw']
+2025-04-13 20:09:53,781 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'I'm just letting you konw'
+2025-04-13 20:09:55,391 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:09:55,401 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:55] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:09:55,419 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:55] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:09:55,419 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:09:55] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:10:10,809 - src.conversation_manager - INFO - Created conversation: 2a4f5037-e0dd-40fa-9f7e-0126708840a4
+2025-04-13 20:10:10,813 - src.memory_manager - INFO - Processed memory into concept nodes: ['far', 'person', 'run', 'hour', 'far person', 'person run', 'run hour']
+2025-04-13 20:10:10,814 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'How far can a person run in an hour?'
+2025-04-13 20:10:15,773 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:10:15,785 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:10:15] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:10:15,804 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:10:15] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:10:15,804 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:10:15] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:10:27,938 - src.conversation_manager - INFO - Created conversation: 752395ea-ce18-47b6-9056-62633a689d53
+2025-04-13 20:10:27,940 - src.memory_manager - INFO - Processed memory into concept nodes: ['far', 'william', 'run', 'hour', 'far william', 'william run', 'run hour']
+2025-04-13 20:10:27,942 - src.memory_manager - INFO - Retrieved 0 relevant concept nodes for query: 'How far can William run in an hour?'
+2025-04-13 20:10:31,953 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:10:31,964 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:10:31] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:10:31,988 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:10:31] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:10:31,989 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:10:31] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:23:55,988 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 20:23:55,989 - src.memory_manager - INFO - New MemoryManager initialized using the dynamic concept graph system.
+2025-04-13 20:23:56,124 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 20:23:56,138 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 20:23:56,138 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 20:24:09,441 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:09] "GET / HTTP/1.1" 200 -
+2025-04-13 20:24:09,513 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 20:24:09,526 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 20:24:09,589 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:09] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:24:09,592 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:09] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 20:24:09,593 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:09] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:24:09,596 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:09] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 20:24:09,597 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:09] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 20:24:16,594 - src.conversation_manager - INFO - Created conversation: 9642d31b-909e-468f-b4c2-deae46769a99
+2025-04-13 20:24:18,099 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:19,110 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:19,996 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:19,997 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'legs']
+2025-04-13 20:24:20,816 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:20,818 - src.memory_manager - INFO - Retrieved 2 relevant concept nodes for query: 'William has no legs'
+2025-04-13 20:24:22,761 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:22,773 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:22] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:24:22,787 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:22] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:24:22,788 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:24:22] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:24:48,250 - src.conversation_manager - INFO - Created conversation: 2ec2087a-20bc-474a-a0cf-60de0ef00956
+2025-04-13 20:24:49,143 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:50,507 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:51,564 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:52,910 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:54,372 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:54,374 - src.memory_manager - INFO - Processed memory into concept nodes: ['run', 'person', 'day', 'running distance']
+2025-04-13 20:24:55,249 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:24:55,252 - src.memory_manager - INFO - Retrieved 5 relevant concept nodes for query: 'How far can a person run in a day?'
+2025-04-13 20:25:00,330 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:25:00,341 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:25:00] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:25:00,363 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:25:00] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:25:00,364 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:25:00] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:25:25,137 - src.conversation_manager - INFO - Created conversation: dc568b69-e343-4318-bead-b31b69114ccd
+2025-04-13 20:25:26,043 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:25:27,254 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:25:28,582 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:25:29,679 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:25:29,680 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'run', 'day']
+2025-04-13 20:25:30,247 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:25:30,249 - src.memory_manager - INFO - Retrieved 5 relevant concept nodes for query: 'How far can William run in a day?'
+2025-04-13 20:25:32,678 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:25:32,689 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:25:32] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:25:32,707 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:25:32] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:25:32,708 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:25:32] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:26:16,284 - src.conversation_manager - INFO - Created conversation: 9d9f926a-6e52-4f39-b744-bd0c5683806e
+2025-04-13 20:26:17,656 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:26:18,502 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:26:19,501 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:26:19,503 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'fish']
+2025-04-13 20:26:20,144 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:26:20,147 - src.memory_manager - INFO - Retrieved 2 relevant concept nodes for query: 'William likes fish'
+2025-04-13 20:26:21,515 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:26:21,526 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:26:21] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:26:21,543 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:26:21] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:26:21,544 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:26:21] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:27:18,643 - src.conversation_manager - INFO - Created conversation: c2a7da1f-9e60-4862-9577-f66cafdcfa58
+2025-04-13 20:27:19,711 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:27:21,219 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:27:22,498 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:27:23,847 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:27:23,849 - src.memory_manager - INFO - Processed memory into concept nodes: ['legs', 'food preferences', 'eating habits']
+2025-04-13 20:27:24,620 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:27:24,623 - src.memory_manager - INFO - Retrieved 4 relevant concept nodes for query: 'Can you tell me about what anybody you know with no legs likes to eat or has a preference for?'
+2025-04-13 20:27:27,174 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:27:27,184 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:27:27] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:27:27,201 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:27:27] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:27:27,201 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:27:27] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:38:17,732 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 20:38:17,734 - src.memory_manager - INFO - New MemoryManager initialized using the dynamic concept graph system.
+2025-04-13 20:38:17,887 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 20:38:17,903 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 20:38:17,903 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 20:38:19,735 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:19] "GET / HTTP/1.1" 200 -
+2025-04-13 20:38:19,810 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 20:38:19,815 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 20:38:19,867 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:19] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:38:19,868 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:19] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 20:38:19,868 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:19] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:38:19,876 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:19] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 20:38:19,878 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:19] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 20:38:24,659 - src.conversation_manager - INFO - Created conversation: b5c595a6-ea8a-4e5b-875e-75003ccb32cc
+2025-04-13 20:38:25,600 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:26,197 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:27,335 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:27,337 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'legs']
+2025-04-13 20:38:27,997 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:27,999 - src.memory_manager - INFO - Retrieved 2 relevant concept nodes for query: 'William has no legs'
+2025-04-13 20:38:30,126 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:30,149 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:30] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:38:30,166 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:30] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:38:30,167 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:38:30] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:38:54,731 - src.conversation_manager - INFO - Created conversation: ab1dd4e8-1061-42a8-85cd-1669f1c4f133
+2025-04-13 20:38:55,912 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:56,854 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:58,003 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:58,005 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'slug']
+2025-04-13 20:38:58,580 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:38:58,582 - src.memory_manager - INFO - Retrieved 2 relevant concept nodes for query: 'William is a slug'
+2025-04-13 20:39:01,540 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:39:01,550 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:39:01] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:39:01,567 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:39:01] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:39:01,567 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:39:01] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:39:41,672 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:39:42,978 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:39:45,060 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:39:45,062 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'disabled']
+2025-04-13 20:39:45,660 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:39:45,661 - src.memory_manager - INFO - Retrieved 2 relevant concept nodes for query: 'When did I say William is disabled?'
+2025-04-13 20:39:48,849 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:39:48,859 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:39:48] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:39:48,882 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:39:48] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:39:48,882 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:39:48] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:40:35,593 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:40:38,335 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:40:39,699 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:40:41,490 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:40:43,736 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:40:43,737 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'legs', 'disabled', 'reasons']
+2025-04-13 20:40:44,408 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:40:44,409 - src.memory_manager - INFO - Retrieved 4 relevant concept nodes for query: 'I said William has no legs, which is not the same as William is disabled, can you think of any reasons why William might have no legs'
+2025-04-13 20:40:48,298 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:40:48,310 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:40:48] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:40:48,334 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:40:48] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:40:48,334 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:40:48] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:48:10,533 - src.claude_client - INFO - ClaudeClient initialized with model claude-3-5-sonnet-20241022
+2025-04-13 20:48:10,534 - src.memory_manager - INFO - New MemoryManager initialized using the dynamic concept graph system.
+2025-04-13 20:48:10,678 - web.app - INFO - Starting web app on 127.0.0.1:5000 (debug=False)
+2025-04-13 20:48:10,696 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 20:48:10,696 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 20:48:18,658 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:18] "GET / HTTP/1.1" 200 -
+2025-04-13 20:48:18,724 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 20:48:18,727 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-04-13 20:48:18,781 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:18] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:48:18,781 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:18] "GET /api/memories?type=non_episodic HTTP/1.1" 200 -
+2025-04-13 20:48:18,783 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:18] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:48:18,784 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:18] "GET /api/memories?type=episodic HTTP/1.1" 200 -
+2025-04-13 20:48:18,788 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:18] "GET /api/tags HTTP/1.1" 200 -
+2025-04-13 20:48:22,579 - src.conversation_manager - INFO - Created conversation: 87127352-8821-4a91-afe2-2f939475628e
+2025-04-13 20:48:23,348 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:24,056 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:24,947 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:26,009 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:26,819 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:26,820 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'legs']
+2025-04-13 20:48:27,591 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:27,593 - src.memory_manager - INFO - Retrieved 2 relevant concept nodes for query: 'William has no legs'
+2025-04-13 20:48:30,178 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:30,189 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:30] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:48:30,205 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:30] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:48:30,207 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:48:30] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:48:47,777 - src.conversation_manager - INFO - Created conversation: f91be0ae-ae76-4370-8ed7-960676153c14
+2025-04-13 20:48:48,730 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:49,556 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:50,379 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:51,604 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:52,525 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:53,395 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:54,466 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:55,310 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:56,506 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:56,507 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'pet slug', 'pet shop', 'slug']
+2025-04-13 20:48:57,615 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:48:57,617 - src.memory_manager - INFO - Retrieved 4 relevant concept nodes for query: 'William is my pet slug, I got him at the pet shop'
+2025-04-13 20:49:01,351 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:49:01,361 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:49:01] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:49:01,380 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:49:01] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:49:01,381 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:49:01] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:49:31,192 - src.conversation_manager - INFO - Created conversation: 29fef288-e573-4802-97e2-803c1500b777
+2025-04-13 20:49:31,825 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:49:34,183 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:49:35,450 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:49:37,122 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:49:37,816 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:49:37,818 - src.memory_manager - INFO - Processed memory into concept nodes: ['william', 'legs']
+2025-04-13 20:49:38,406 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:49:38,407 - src.memory_manager - INFO - Retrieved 2 relevant concept nodes for query: 'Why doesn't William have any legs'
+2025-04-13 20:49:42,263 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:49:42,285 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:49:42] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:49:42,304 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:49:42] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:49:42,305 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:49:42] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:51:04,900 - src.conversation_manager - INFO - Created conversation: f4aee7d0-b06c-4b3a-9b79-94e4d891d7ad
+2025-04-13 20:51:05,826 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:07,804 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:08,695 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:09,831 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:10,624 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:11,882 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:12,645 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:14,355 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:15,304 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:17,222 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:18,244 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:19,783 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:20,707 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:20,709 - src.memory_manager - INFO - Processed memory into concept nodes: ['henrietta', 'john', 'mum', 'pet slug', 'disabled', 'slug']
+2025-04-13 20:51:22,010 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:22,012 - src.memory_manager - INFO - Retrieved 6 relevant concept nodes for query: 'Hello my name is Henrietta, I am John's mum. He says he has been asking you about his pet slug and you said it was disabled?'
+2025-04-13 20:51:27,006 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:51:27,023 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:51:27] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:51:27,040 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:51:27] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:51:27,041 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:51:27] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:51:59,912 - src.conversation_manager - INFO - Created conversation: d34d7e19-7392-460c-93d3-71651c4f31f5
+2025-04-13 20:52:00,923 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:52:02,801 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:52:04,148 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:52:05,933 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:52:06,810 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:52:06,813 - src.memory_manager - INFO - Processed memory into concept nodes: ['slug', 'mum']
+2025-04-13 20:52:07,596 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:52:07,598 - src.memory_manager - INFO - Retrieved 7 relevant concept nodes for query: 'What did you tell my mum about my slug?'
+2025-04-13 20:52:11,460 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:52:11,472 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:52:11] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:52:11,493 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:52:11] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:52:11,493 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:52:11] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:58:30,379 - src.conversation_manager - INFO - Created conversation: 184b5b22-0bac-44b8-a71d-40eeffc73306
+2025-04-13 20:58:31,963 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:33,752 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:35,001 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:36,432 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:37,298 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:39,318 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:40,082 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:41,712 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:43,090 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:44,477 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:45,182 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:45,188 - src.memory_manager - INFO - Processed memory into concept nodes: ['pet shop', 'owner', 'establishment', 'slugs', 'jim']
+2025-04-13 20:58:45,935 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:45,939 - src.memory_manager - INFO - Retrieved 8 relevant concept nodes for query: 'I'm a pet shop owner, my establishment does not sell slugs, my name is Jim'
+2025-04-13 20:58:48,569 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:58:48,583 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:58:48] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:58:48,609 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:58:48] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:58:48,611 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:58:48] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 20:59:31,090 - src.conversation_manager - INFO - Created conversation: e03f2756-cc7a-429d-b917-043dd6e27408
+2025-04-13 20:59:31,952 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:32,776 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:34,083 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:35,752 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:36,540 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:37,379 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:38,697 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:39,757 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:40,612 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:42,328 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:43,217 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:43,229 - src.memory_manager - INFO - Processed memory into concept nodes: ['henrietta', 'pet shop', 'john', 'slug', 'shop owner']
+2025-04-13 20:59:44,553 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:44,559 - src.memory_manager - INFO - Retrieved 12 relevant concept nodes for query: 'Henrietta here, I can't remember the name of the guy who owns the pet shop where we bought John's slug, do you know it?'
+2025-04-13 20:59:48,583 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 20:59:48,594 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:59:48] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 20:59:48,612 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:59:48] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 20:59:48,612 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 20:59:48] "GET /api/memories HTTP/1.1" 200 -
+2025-04-13 21:00:07,665 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 21:00:08,985 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 21:00:10,193 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 21:00:10,194 - src.memory_manager - INFO - Processed memory into concept nodes: ['jim']
+2025-04-13 21:00:11,163 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 21:00:11,164 - src.memory_manager - INFO - Retrieved 1 relevant concept nodes for query: 'So its not Jim....'
+2025-04-13 21:00:14,015 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-13 21:00:14,025 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 21:00:14] "POST /api/chat HTTP/1.1" 200 -
+2025-04-13 21:00:14,042 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 21:00:14] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-13 21:00:14,043 - werkzeug - INFO - 127.0.0.1 - - [13/Apr/2025 21:00:14] "GET /api/memories HTTP/1.1" 200 -

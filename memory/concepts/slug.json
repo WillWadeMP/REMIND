@@ -1,0 +1,53 @@
+{
+  "name": "slug",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "Slugs can be kept as pets and are available for purchase at pet shops.",
+        "memory_id": null,
+        "date": "2025-04-13T19:48:47.778114",
+        "tone": "unclear"
+      },
+      {
+        "text": "A slug can be kept as a pet. No specific traits or characteristics of slugs are confirmed in this limited context.",
+        "memory_id": null,
+        "date": "2025-04-13T19:51:04.900018",
+        "tone": "unclear"
+      },
+      {
+        "text": "There is not enough context from this single question to make meaningful claims about slugs. The memory only indicates someone had a slug and it was discussed with their mother, but provides no details about the slug itself or what was said about it.",
+        "memory_id": null,
+        "date": "2025-04-13T19:51:59.913908",
+        "tone": "unclear"
+      },
+      {
+        "text": "A slug can be kept as a pet and can be purchased from pet shops.",
+        "memory_id": null,
+        "date": "2025-04-13T19:59:31.091850",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:48:47.778114",
+      "2025-04-13T19:51:04.900018",
+      "2025-04-13T19:51:59.913908",
+      "2025-04-13T19:59:31.091850"
+    ]
+  },
+  "related_concepts": {
+    "william": "co-occurs",
+    "pet slug": "co-occurs",
+    "pet shop": "co-occurs",
+    "henrietta": "co-occurs",
+    "john": "co-occurs",
+    "mum": "co-occurs",
+    "disabled": "co-occurs",
+    "shop owner": "co-occurs"
+  },
+  "tags": [
+    "slug"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:59:40.613110"
+}

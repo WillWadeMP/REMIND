@@ -1,0 +1,28 @@
+{
+  "name": "owner",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "An owner can operate a retail business like a pet shop. In this case, the owner (Jim) has decision-making authority over what animals are sold in their establishment, including the ability to exclude certain creatures like slugs from their inventory.",
+        "memory_id": null,
+        "date": "2025-04-13T19:58:30.380029",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:58:30.380029"
+    ]
+  },
+  "related_concepts": {
+    "pet shop": "co-occurs",
+    "establishment": "co-occurs",
+    "slugs": "co-occurs",
+    "jim": "co-occurs"
+  },
+  "tags": [
+    "owner"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:58:37.299798"
+}

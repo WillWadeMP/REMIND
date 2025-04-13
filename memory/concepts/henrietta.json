@@ -1,0 +1,38 @@
+{
+  "name": "henrietta",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "Henrietta is John's mother who inquired about a conversation regarding her son's pet slug, which had apparently been described as disabled.",
+        "memory_id": null,
+        "date": "2025-04-13T19:51:04.900018",
+        "tone": "unclear"
+      },
+      {
+        "text": "Henrietta appears to be a person who was involved in purchasing a slug as a pet for someone named John from a pet shop.",
+        "memory_id": null,
+        "date": "2025-04-13T19:59:31.091850",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:51:04.900018",
+      "2025-04-13T19:59:31.091850"
+    ]
+  },
+  "related_concepts": {
+    "john": "co-occurs",
+    "mum": "co-occurs",
+    "pet slug": "co-occurs",
+    "disabled": "co-occurs",
+    "slug": "co-occurs",
+    "pet shop": "co-occurs",
+    "shop owner": "co-occurs"
+  },
+  "tags": [
+    "henrietta"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:59:34.084284"
+}

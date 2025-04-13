@@ -1,0 +1,28 @@
+{
+  "name": "shop owner",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "Shop owners can operate specialized retail businesses like pet shops, where they sell animals and related supplies to customers. They are remembered and referenced by customers in relation to their specific type of store.",
+        "memory_id": null,
+        "date": "2025-04-13T19:59:31.091850",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:59:31.091850"
+    ]
+  },
+  "related_concepts": {
+    "henrietta": "co-occurs",
+    "pet shop": "co-occurs",
+    "john": "co-occurs",
+    "slug": "co-occurs"
+  },
+  "tags": [
+    "shop owner"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:59:43.228864"
+}

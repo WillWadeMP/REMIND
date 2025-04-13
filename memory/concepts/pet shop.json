@@ -1,0 +1,48 @@
+{
+  "name": "pet shop",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "Pet shops are retail establishments that sell live animals as pets, including less common pets like slugs.",
+        "memory_id": null,
+        "date": "2025-04-13T19:48:47.778114",
+        "tone": "unclear"
+      },
+      {
+        "text": "Pet shops are retail establishments run by owners/proprietors. They sell animals as pets, though not all species are carried by every shop - some may specifically exclude certain creatures like slugs from their inventory.",
+        "memory_id": null,
+        "date": "2025-04-13T19:58:30.380029",
+        "tone": "unclear"
+      },
+      {
+        "text": "Pet shops are retail establishments where people can purchase pets like slugs. They are typically operated by individual owners/proprietors.",
+        "memory_id": null,
+        "date": "2025-04-13T19:59:31.091850",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:48:47.778114",
+      "2025-04-13T19:58:30.380029",
+      "2025-04-13T19:59:31.091850"
+    ]
+  },
+  "related_concepts": {
+    "william": "co-occurs",
+    "pet slug": "co-occurs",
+    "slug": "co-occurs",
+    "owner": "co-occurs",
+    "establishment": "co-occurs",
+    "slugs": "co-occurs",
+    "jim": "co-occurs",
+    "henrietta": "co-occurs",
+    "john": "co-occurs",
+    "shop owner": "co-occurs"
+  },
+  "tags": [
+    "pet shop"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:59:36.541787"
+}

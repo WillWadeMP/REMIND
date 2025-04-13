@@ -1,126 +1,120 @@
 #!/usr/bin/env python
 """
 Main entry point for the REMIND system.
+This version uses a new concept–graph memory system.
 """
-import os
-import sys
-import logging
-import argparse
-import config
-from src.memory_layer import MemoryLayer
-from src.prompt_handler import PromptHandler
-from src.relevancer import Relevancer
-from src.response_generator import ResponseGenerator
-from src.memory_updater import MemoryUpdater
 
-# Check if we want to run in web mode
-if "--web" in sys.argv:
-    from web_interface.app import start_web_app
+import argparse
+import logging
+import sys
+from pathlib import Path
+from datetime import datetime
+
+import config
+from src.memory_manager import MemoryManager
+
+logger = logging.getLogger(__name__)
 
 def parse_args():
     """Parse command-line arguments."""
-    parser = argparse.ArgumentParser(description="REMIND - Retrieval of Episodic & Metadata-Indexed Information for Natural Dialogue")
-    parser.add_argument("--cli", action="store_true", help="Run in CLI mode")
+    parser = argparse.ArgumentParser(
+        description="REMIND - Retrieval-Enhanced Memory for Interactive Natural Dialogue"
+    )
     parser.add_argument("--web", action="store_true", help="Run in web interface mode")
-    parser.add_argument("--model", type=str, default=None, help=f"Claude model to use (default: {config.CLAUDE_MODEL})")
-    parser.add_argument("--port", type=int, default=5000, help="Port for web interface (default: 5000)")
-    parser.add_argument("--host", type=str, default="127.0.0.1", help="Host for web interface (default: 127.0.0.1)")
+    parser.add_argument("--cli", action="store_true", help="Run in CLI mode")
+    parser.add_argument(
+        "--model", type=str, default=None, 
+        help=f"Claude model to use (default: {config.CLAUDE_MODEL})"
+    )
+    parser.add_argument(
+        "--port", type=int, default=config.WEB_PORT,
+        help=f"Port for web interface (default: {config.WEB_PORT})"
+    )
+    parser.add_argument(
+        "--host", type=str, default=config.WEB_HOST,
+        help=f"Host for web interface (default: {config.WEB_HOST})"
+    )
     parser.add_argument("--debug", action="store_true", help="Run in debug mode")
     return parser.parse_args()
 
-def run_cli_mode(args):
-    """Run the system in CLI mode."""
-    print("Starting REMIND in CLI mode...")
+def run_cli_mode(memory_manager: MemoryManager, model=None):
+    """
+    Run the system in CLI mode using the concept–graph memory.
+    Each user message is processed to update the concept nodes, and a response is generated.
+    """
+    print("\nWelcome to REMIND CLI Mode!")
+    print("Type 'exit' to quit, 'help' for commands\n")
     
-    # Set up logging with correct level
-    log_level_int = getattr(logging, config.LOG_LEVEL, logging.INFO)
-    if args.debug:
-        log_level_int = logging.DEBUG
-    
-    # Initialize components
-    memory_layer = MemoryLayer()
-    prompt_handler = PromptHandler()
-    relevancer = Relevancer(memory_layer)
-    response_generator = ResponseGenerator()
-    memory_updater = MemoryUpdater(memory_layer)
-    
-    # Update model if specified
-    if args.model:
-        config.CLAUDE_MODEL = args.model
-        print(f"Using model: {config.CLAUDE_MODEL}")
-    
-    print("Type 'exit' to quit.")
-    
-    # CLI loop
     while True:
-        user_input = input("\nYou: ").strip()
-        
-        # Check if the user wants to exit
+        user_input = input("> ").strip()
         if user_input.lower() in ["exit", "quit", "q"]:
             print("Goodbye!")
             break
-        
-        # Skip empty inputs
-        if not user_input:
+        elif user_input.lower() in ["help", "h", "?"]:
+            print("\nEnter any message to talk to the assistant.")
+            print("  exit  - Quit the program")
+            print("  help  - Show this help message\n")
             continue
         
-        try:
-            # Process the prompt
-            processed_prompt = prompt_handler.process(user_input)
-            
-            # Retrieve relevant memories
-            relevant_memories = relevancer.retrieve(processed_prompt)
-            
-            # Generate a response
-            response = response_generator.generate(user_input, relevant_memories)
-            
-            # Update memories
-            memory_updater.update(user_input, response)
-            
-            # Print the response
-            print(f"\nAssistant: {response}")
-            
-        except Exception as e:
-            print(f"\nAn error occurred: {e}")
+        # Process the input into concept nodes
+        updated_concepts = memory_manager.process_memory(user_input)
+        # Generate response using current concept nodes as context
+        response = memory_manager.generate_response(query=user_input)
+        
+        print(f"\nAssistant: {response}")
+        print(f"(Concepts updated: {', '.join(updated_concepts)})\n")
+
+def run_web_mode(memory_manager: MemoryManager, host: str, port: int, debug: bool, model: str):
+    """
+    Run the web interface (updated to include conversation manager).
+    """
+    try:
+        from web.app import run_web_app
+        from src.conversation_manager import ConversationManager
+
+        conversation_manager = ConversationManager()
+
+        run_web_app(
+            memory_manager_instance=memory_manager,
+            conv_manager_instance=conversation_manager,
+            host=host,
+            port=port,
+            debug=debug,
+            model=model
+        )
+    except ImportError:
+        print("Error: Web interface not available. Please install flask.")
+        print("Run 'pip install flask' to install.")
+        sys.exit(1)
+
 
 def main():
     """Main function."""
     args = parse_args()
     
-    # Override log level if in debug mode
-    if args.debug:
-        log_level_str = "DEBUG"
-        log_level_int = logging.DEBUG
-    else:
-        log_level_str = config.LOG_LEVEL
-        log_level_int = getattr(logging, config.LOG_LEVEL, logging.INFO)
+    # Override model if specified, otherwise use default from config
+    model = args.model if args.model else config.CLAUDE_MODEL
     
-    # Set up logging
-    logging.basicConfig(
-        level=log_level_int,
-        format=config.LOG_FORMAT,
-        handlers=[
-            logging.FileHandler(config.LOG_FILE),
-            logging.StreamHandler()
-        ]
-    )
+    # Create (or use a new) directory for concept nodes
+    concepts_dir = config.MEMORY_DIR / "concepts"
+    concepts_dir.mkdir(parents=True, exist_ok=True)
     
-    # Update model if specified
-    if args.model:
-        config.CLAUDE_MODEL = args.model
+    # Initialize the new MemoryManager with the concepts directory
+    memory_manager = MemoryManager(concepts_dir=concepts_dir)
     
-    # Run in the specified mode
+    # Choose mode
     if args.web:
-        if "web_interface" in sys.modules:
-            start_web_app(host=args.host, port=args.port, debug=args.debug)
-        else:
-            print("Error: Web interface mode requires Flask. Please install it with 'pip install flask'.")
+        run_web_mode(memory_manager, host=args.host, port=args.port, debug=args.debug, model=model)
     elif args.cli:
-        run_cli_mode(args)
+        run_cli_mode(memory_manager, model=model)
     else:
         print("Please specify a mode: --cli or --web")
         print("Example: python main.py --cli")
-        print("Run 'python main.py --help' for more information.")
+        print("Run with --help for more options.")
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO,
+                        format=config.LOG_FORMAT,
+                        handlers=[logging.FileHandler(config.LOG_FILE),
+                                  logging.StreamHandler()])
     main()

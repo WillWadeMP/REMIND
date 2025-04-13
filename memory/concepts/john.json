@@ -1,0 +1,38 @@
+{
+  "name": "john",
+  "type": "unknown",
+  "traits": {
+    "summary": [
+      {
+        "text": "John is a person who has a mother named Henrietta and owns a pet slug. No other confirmed details about his identity, age, or background are established.",
+        "memory_id": null,
+        "date": "2025-04-13T19:51:04.900018",
+        "tone": "unclear"
+      },
+      {
+        "text": "John owns or owned a slug as a pet, which was purchased from a pet shop.",
+        "memory_id": null,
+        "date": "2025-04-13T19:59:31.091850",
+        "tone": "unclear"
+      }
+    ],
+    "last_updated_memory": [
+      "2025-04-13T19:51:04.900018",
+      "2025-04-13T19:59:31.091850"
+    ]
+  },
+  "related_concepts": {
+    "henrietta": "co-occurs",
+    "mum": "co-occurs",
+    "pet slug": "co-occurs",
+    "disabled": "co-occurs",
+    "slug": "co-occurs",
+    "pet shop": "co-occurs",
+    "shop owner": "co-occurs"
+  },
+  "tags": [
+    "john"
+  ],
+  "linked_memories": [],
+  "last_updated": "2025-04-13T19:59:38.698718"
+}

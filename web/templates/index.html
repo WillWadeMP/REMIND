@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMIND - Memory Enhanced AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>REMIND</h1>
+                <p>Retrieval-Enhanced Memory for Interactive Natural Dialogue</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><button id="new-chat-btn" class="btn primary">New Chat</button></li>
+                    <li><button id="toggle-history-btn" class="btn secondary">History</button></li>
+                    <li><button id="toggle-memory-btn" class="btn secondary">Memory</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-title" id="chat-title">New Conversation</div>
+                    <div class="chat-tags" id="chat-tags"></div>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="welcome-message">
+                        <h2>Welcome to REMIND!</h2>
+                        <p>I'm an AI assistant with memory capabilities. How can I help you today?</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <textarea id="message-input" placeholder="Type your message here..."></textarea>
+                    <button id="send-btn" class="btn primary">Send</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="sidebar" id="history-sidebar">
+            <div class="sidebar-header">
+                <h2>Conversation History</h2>
+                <button id="close-history-btn" class="btn icon">×</button>
+            </div>
+            <div class="sidebar-content">
+                <div class="search-box">
+                    <input type="text" id="history-search" placeholder="Search conversations...">
+                </div>
+                <div class="conversation-list" id="conversation-list">
+                    <div class="loading">Loading conversations...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar" id="memory-sidebar">
+            <div class="sidebar-header">
+                <h2>Memory System</h2>
+                <button id="close-memory-btn" class="btn icon">×</button>
+            </div>
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="episodic">Episodic</button>
+                <button class="tab-btn" data-tab="non-episodic">Non-Episodic</button>
+                <button class="tab-btn" data-tab="tags">Tags</button>
+            </div>
+            <div class="sidebar-content">
+                <div class="tab-panel active" id="overview-panel">
+                    <div class="memory-stats">
+                        <div class="stat-card">
+                            <h3>Conversations</h3>
+                            <div class="stat-value" id="conversation-count">-</div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Episodic Memories</h3>
+                            <div class="stat-value" id="episodic-count">-</div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Non-Episodic Memories</h3>
+                            <div class="stat-value" id="non-episodic-count">-</div>
+                        </div>
+                    </div>
+                    <div class="memory-search">
+                        <h3>Search Memories</h3>
+                        <div class="search-box">
+                            <input type="text" id="memory-search" placeholder="Search all memories...">
+                            <button id="memory-search-btn" class="btn secondary">Search</button>
+                        </div>
+                        <div class="search-results" id="memory-search-results"></div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="episodic-panel">
+                    <div class="search-box">
+                        <input type="text" id="episodic-search" placeholder="Search episodic memories...">
+                    </div>
+                    <div class="memory-list" id="episodic-list">
+                        <div class="loading">Loading memories...</div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="non-episodic-panel">
+                    <div class="search-box">
+                        <input type="text" id="non-episodic-search" placeholder="Search factual memories...">
+                    </div>
+                    <div class="memory-list" id="non-episodic-list">
+                        <div class="loading">Loading memories...</div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="tags-panel">
+                    <div class="tags-cloud" id="tags-cloud">
+                        <div class="loading">Loading tags...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="memory-detail-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Memory Details</h2>
+                    <button id="close-modal-btn" class="btn icon">×</button>
+                </div>
+                <div class="modal-body" id="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
