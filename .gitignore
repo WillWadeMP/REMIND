@@ -3,3 +3,4 @@ venv/
 
 # Ignore key file
 keys.txt
+config.py
