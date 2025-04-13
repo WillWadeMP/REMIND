@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 # API Configuration
 # Hardcoded key for personal use
-CLAUDE_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "your_api_key_here")  # Replace with your actual API key
+CLAUDE_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 # Model Configuration
 # Main model for response generation and complex tasks
 CLAUDE_MODEL = "claude-3-5-sonnet-20241022"  # Modern, capable model
